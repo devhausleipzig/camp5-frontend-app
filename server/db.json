@@ -25,22 +25,22 @@
       "suggestions": []
     }
   ],
-  "receipies": [
+  "recipes": [
     {
-      "id": "",
-      "picture": "",
+      "id": "1",
+      "name": "potato",
+      "picture": "url...",
       "ingredients": [
         {
-          "name": "",
-          "amount": 0,
-          "cost": 0
+          "name": "potato",
+          "amount": 5000,
+          "cost": 1000000
         }
       ],
-      "methods": [],
-      "prep_time": "",
-      "cost": "",
-      "name": "",
-      "keywords": [],
+      "methods": ["fry"],
+      "prep_time": "5min",
+      "cost": "1000000$",
+      "keywords": ["potato", "fat", "ketchup"],
       "preferences": [],
       "category": "",
       "steps": []

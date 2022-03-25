@@ -6,10 +6,10 @@ export type User = {
   profile_picture: string;
   password: string;
   email: string;
-  collection: Recepie[];
+  collection: Recipe[];
   user_options: UserOptions;
   shopping_list: ShoppingList;
-  suggestions: Recepie[];
+  suggestions: Recipe[];
 };
 
 export type UserOptions = Partial<GlobalOptions>;
@@ -22,7 +22,7 @@ export type ShoppingList = [
   }
 ];
 
-export type Recepie = {
+export type Recipe = {
   ingredient_name: string;
   id: string;
   picture: string;
