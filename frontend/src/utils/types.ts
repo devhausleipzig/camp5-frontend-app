@@ -44,11 +44,11 @@ export type Ingredient = {
 
 export type GlobalOptions = [
   {
-    preferences: string[];
-    categories: string[];
-    allergies: string[];
+    preferences: string[]; // to be converted to Union Type?
+    categories: string[]; // to be converted to Union Type?
+    allergies: string[]; // to be converted to Union Type?
     ingredients: Ingredient[];
-    methods: string[];
+    methods: string[]; // to be converted to Union Type?
     keywords: string[];
   }
 ];
