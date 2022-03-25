@@ -28,7 +28,7 @@
   "recipes": [
     {
       "id": "1",
-      "name": "potato",
+      "recipeName": "potato",
       "picture": "url...",
       "ingredients": [
         {

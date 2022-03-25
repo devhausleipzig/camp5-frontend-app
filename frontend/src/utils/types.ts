@@ -23,7 +23,7 @@ export type ShoppingList = [
 ];
 
 export type Recipe = {
-  recipe_name: string;
+  recipeName: string;
   id: string;
   picture: string;
   ingredients: Ingredient[];
