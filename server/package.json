@@ -1,0 +1,11 @@
+{
+  "name": "cooking-app-server",
+  "version": "0.0.1",
+  "license": "ISC",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3005"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
