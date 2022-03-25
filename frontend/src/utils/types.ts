@@ -16,20 +16,20 @@ export type UserOptions = Partial<GlobalOptions>;
 
 export type ShoppingList = [
   {
-    name: Partial<Ingredient>;
+    ingedient_name: Partial<Ingredient>;
     accAmount: string;
     accCost: string;
   }
 ];
 
 export type Recepie = {
+  ingredient_name: string;
   id: string;
   picture: string;
   ingredients: Ingredient[];
-  method: Partial<GlobalOptions>;
-  time: string;
+  methods: Partial<GlobalOptions>;
+  prep_time: string;
   cost: string;
-  name: string;
   keywords: Partial<GlobalOptions>;
   preferences: Partial<GlobalOptions>;
   category: Partial<GlobalOptions>;
