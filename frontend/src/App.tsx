@@ -1,11 +1,15 @@
 import { useState } from "react";
+import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
+import { getRecipes } from "./utils/fetchRecipes";
 
 function App() {
   const [count, setCount] = useState(0);
+  getRecipes();
 
   return (
     <div className="App">
+      <Searchbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="text-red-500">Hello Vite + React!</p>

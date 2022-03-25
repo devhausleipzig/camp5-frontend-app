@@ -23,7 +23,7 @@ export type ShoppingList = [
 ];
 
 export type Recipe = {
-  ingredient_name: string;
+  recipe_name: string;
   id: string;
   picture: string;
   ingredients: Ingredient[];
@@ -38,7 +38,7 @@ export type Recipe = {
 
 export type Ingredient = {
   name: string;
-  amount: number;
+  amount: string;
   cost: number;
 };
 

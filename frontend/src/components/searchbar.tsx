@@ -1,34 +1,40 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import { Recipe } from "../utils/types";
+import { getRecipes } from "../utils/fetchRecipes";
 
-type Person = {
-  id: number;
-  name: string;
-};
+// type Person = {
+//   id: number;
+//   name: string;
+// };
 
-const people: Person[] = [
-  { id: 1, name: "Wade Cooper" },
-  { id: 2, name: "Arlene Mccoy" },
-  { id: 3, name: "Devon Webb" },
-  { id: 4, name: "Tom Cook" },
-  { id: 5, name: "Tanya Fox" },
-  { id: 6, name: "Hellen Schmidt" },
-];
+// const people = [
+//   { id: 1, name: "Wade Cooper" },
+//   { id: 2, name: "Arlene Mccoy" },
+//   { id: 3, name: "Devon Webb" },
+//   { id: 4, name: "Tom Cook" },
+//   { id: 5, name: "Tanya Fox" },
+//   { id: 6, name: "Hellen Schmidt" },
+// ];
 
 export default function Searchbar() {
-  const [selected, setSelected] = useState<typeof people[0]>(people[0]);
+  const [selected, setSelected] = useState<Recipe>();
   const [query, setQuery] = useState("");
 
-  const filteredPeople =
-    query === ""
-      ? people
-      : people.filter((person: Person) =>
-          person.name
-            .toLowerCase()
-            .replace(/\s+/g, "")
-            .includes(query.toLowerCase().replace(/\s+/g, ""))
-        );
+  async function filteredPeople() {
+    if (query === "") {
+      return null;
+    } else {
+      const response = await getRecipes();
+      const result = response?.filter((recipe) =>
+        recipe.name
+          .toLowerCase()
+          .replace(/\s+/g, "")
+          .includes(query.toLowerCase().replace(/\s+/g, ""))
+      );
+    }
+  }
 
   return (
     <div className="w-72 fixed top-16">

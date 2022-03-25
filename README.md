@@ -14,3 +14,9 @@
 [react-router-dom](https://www.npmjs.com/package/react-router-dom)  
 [pnpm](https://pnpm.io/motivation)  
 [dbjson-server](https://github.com/typicode/json-server)
+
+For the moment we agreed on following syntax-conventions:
+
+- try/ catch
+- axios
+- async / await
