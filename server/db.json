@@ -1,5 +1,57 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "users": [
+    {
+      "id": "",
+      "sign_in_Date": "",
+      "user_name": "",
+      "profile_picture": "",
+      "password": "",
+      "email": "",
+      "collection": [],
+      "user_options": [
+        {
+          "preferences": [],
+          "categories": [],
+          "allergies": []
+        }
+      ],
+      "shopping_list": [
+        {
+          "name": "",
+          "amount": 0,
+          "cost": 0
+        }
+      ],
+      "suggestions": []
+    }
+  ],
+  "receipies": [
+    {
+      "id": "",
+      "picture": "",
+      "ingredients": [
+        {
+          "name": "",
+          "amount": 0,
+          "cost": 0
+        }
+      ],
+      "method": "",
+      "time": "",
+      "cost": "",
+      "name": "",
+      "keywords": [],
+      "preferences": [],
+      "category": "",
+      "steps": []
+    }
+  ],
+  "global_options": [
+    {
+      "preferences": [],
+      "categories": [],
+      "allergies": [],
+      "ingredient_names": []
+    }
+  ]
 }
