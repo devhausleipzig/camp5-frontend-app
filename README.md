@@ -4,7 +4,7 @@
 1. run `pnpm install` in the 'frontend' folder
 1. run `pnpm install` in the 'server' folder
 1. type `pnpm start` in one shell run the server
-1. type `pnpm dev` in another shell to start preview
+1. type `pnpm run dev` in another shell to start preview
 
 ## Troubleshooting
 
