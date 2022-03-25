@@ -5,7 +5,7 @@ specifiers:
 
 dependencies:
   json-server: 0.17.0
-
+  
 packages:
 
   /@sindresorhus/is/0.14.0:
