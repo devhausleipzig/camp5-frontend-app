@@ -1,1 +1,4 @@
-{ "middlewares": ["customId.js"] }
+{
+    "port": 3005,
+    "middlewares": ["slugId.js"]
+}
