@@ -1,34 +1,34 @@
 export type User = {
   id: string;
-  sign_up_date: string;
-  last_log_in_date: string;
-  user_name: string;
-  profile_picture: string;
+  signUpdate: string;
+  lastLogInDate: string;
+  username: string;
+  profilePicture: string;
   password: string;
   email: string;
-  collection: Recepie[];
-  user_options: UserOptions;
-  shopping_list: ShoppingList;
-  suggestions: Recepie[];
+  collection: Recipe[];
+  userOptions: UserOptions;
+  shoppingList: ShoppingList;
+  suggestions: Recipe[];
 };
 
 export type UserOptions = Partial<GlobalOptions>;
 
 export type ShoppingList = [
   {
-    ingedient_name: Partial<Ingredient>;
+    ingedientName: Partial<Ingredient>;
     accAmount: string;
     accCost: string;
   }
 ];
 
-export type Recepie = {
-  ingredient_name: string;
+export type Recipe = {
+  ingredientName: string;
   id: string;
   picture: string;
   ingredients: Ingredient[];
   methods: Partial<GlobalOptions>;
-  prep_time: string;
+  prepTime: string;
   cost: string;
   keywords: Partial<GlobalOptions>;
   preferences: Partial<GlobalOptions>;
