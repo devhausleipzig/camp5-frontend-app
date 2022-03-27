@@ -2,28 +2,24 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { Recipe } from "../utils/types";
-import { getRecipes } from "../utils/fetchRecipes";
 
-export default function Searchbar() {
-  const [selected, setSelected] = useState<string[]>();
+type SearchbarProps = {
+  recipes: Recipe[];
+};
+
+export default function Searchbar({ recipes }: SearchbarProps) {
+  const [selected, setSelected] = useState();
   const [query, setQuery] = useState("");
 
-  let result: Recipe[] | undefined = [];
-
-  async function filteredRecipes() {
-    if (query === "") {
-      return [];
-    } else {
-      const response = await getRecipes();
-      result = response?.filter((recipe) =>
-        recipe.recipeName
-          .toLowerCase()
-          .replace(/\s+/g, "")
-          .includes(query.toLowerCase().replace(/\s+/g, ""))
-      );
-      return result;
-    }
-  }
+  const filteredRecipes =
+    query === ""
+      ? []
+      : recipes.filter((recipe: Recipe) =>
+          recipe.recipeName
+            .toLowerCase()
+            .replace(/\s+/g, "")
+            .includes(query.toLowerCase().replace(/\s+/g, ""))
+        );
 
   return (
     <div className="w-72 fixed top-16">
@@ -33,15 +29,7 @@ export default function Searchbar() {
             <Combobox.Input
               className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-gray-900"
               displayValue={(recipe: Recipe) => recipe.recipeName}
-              onChange={async (event) => {
-                const value = event.target.value;
-                const recipes = (await filteredRecipes()) as Recipe[];
-                const recipeNames: string[] = recipes.map(
-                  (recipe) => recipe.recipeName
-                );
-                setSelected(recipeNames);
-                setQuery(value);
-              }}
+              onChange={(event) => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <SelectorIcon
@@ -58,12 +46,12 @@ export default function Searchbar() {
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {result.length === 0 && query !== "" ? (
+              {filteredRecipes.length === 0 && query !== "" ? (
                 <div className="cursor-default select-none relative py-2 px-4 text-gray-700">
                   Nothing found.
                 </div>
               ) : (
-                result.map((recipe: Recipe) => (
+                filteredRecipes.map((recipe) => (
                   <Combobox.Option
                     key={recipe.id}
                     className={({ active }) =>
