@@ -1,8 +1,8 @@
 export type User = {
   id: string;
-  signUpdate: string;
+  signUpDate: string;
   lastLogInDate: string;
-  username: string;
+  userName: string;
   profilePicture: string;
   password: string;
   email: string;
@@ -23,7 +23,7 @@ export type ShoppingList = [
 ];
 
 export type Recipe = {
-  ingredientName: string;
+  recipeName: string;
   id: string;
   picture: string;
   ingredients: Ingredient[];
@@ -38,7 +38,7 @@ export type Recipe = {
 
 export type Ingredient = {
   name: string;
-  amount: number;
+  amount: string;
   cost: number;
 };
 

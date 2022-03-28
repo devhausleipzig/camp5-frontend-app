@@ -15,6 +15,8 @@
 [pnpm](https://pnpm.io/motivation)  
 [dbjson-server](https://github.com/typicode/json-server)
 
-### pnpm
+For the moment we agreed on following syntax-conventions:
 
-To install pnpm, type 'npm install pnpm -g'
+- try/ catch
+- axios
+- async / await
