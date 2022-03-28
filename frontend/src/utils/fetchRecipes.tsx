@@ -1,10 +1,10 @@
-import axios from "axios";
+import api from "./api"
 import { Recipe } from "./types";
 
 export const getRecipes = async (): Promise<Recipe[]> => {
   let recipes;
   try {
-    const response = await axios.get("http://localhost:3005/recipes");
+    const response = await api.get("recipes");
     recipes = response.data;
   } catch (err) {
     console.error(err);

@@ -2,9 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@headlessui/react': ^1.5.0
-
   '@heroicons/react': ^1.0.6
-
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
   '@vitejs/plugin-react': ^1.0.7
@@ -15,23 +13,18 @@ specifiers:
   react: ^17.0.2
   react-dom: ^17.0.2
   react-router-dom: ^6.2.2
-  solid: link:@heroicons/react/solid
   tailwindcss: ^3.0.23
   typescript: ^4.5.4
   vite: ^2.8.0
 
 dependencies:
   '@headlessui/react': 1.5.0_react-dom@17.0.2+react@17.0.2
-
-
   '@heroicons/react': 1.0.6_react@17.0.2
-
   axios: 0.26.1
   lodash: 4.17.21
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
-  solid: link:@heroicons/react/solid
 
 devDependencies:
   '@types/react': 17.0.42
@@ -331,8 +324,6 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-<<<<<<< HEAD
-=======
   /@heroicons/react/1.0.6_react@17.0.2:
     resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
     peerDependencies:
@@ -341,7 +332,6 @@ packages:
       react: 17.0.2
     dev: false
 
->>>>>>> searchbar-weekend-aron
   /@jridgewell/resolve-uri/3.0.5:
     resolution: {integrity: sha512-VPeQ7+wH0itvQxnG+lIzWgkysKIr3L9sslimFW55rHMdGu/qCQ5z5h9zq4gI8uBtqkpHhsF4Z/OwExufUCThew==}
     engines: {node: '>=6.0.0'}
