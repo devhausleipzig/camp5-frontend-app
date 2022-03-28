@@ -14,7 +14,13 @@ module.exports = {
       darkbrown: "#513131",
       white: "#FFFFFF",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        md: "0 0.1rem 0.2rem rgba(0, 0, 0, 0.24), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.8rem rgba(0, 0, 0, 0.18)",
+        inner:
+          "inset 0.4rem 0.4rem 1rem 0 rgba(255, 0, 0, 0.25), inset -0.4rem -0.4rem 1rem 0 rgba(255, 0, 0, 0.25)",
+      },
+    },
   },
   plugins: [],
 };
