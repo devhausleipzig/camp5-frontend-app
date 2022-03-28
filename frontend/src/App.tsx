@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
+import RecipeCard from "./components/card";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
 import { getRecipes } from "./utils/fetchRecipes";
@@ -18,9 +19,30 @@ function App() {
     fetchAllRecipes();
   }, []);
 
+  const mockData = {
+    id: "1",
+    recipeName: "Salad",
+    picture: "./assets/pics/test.png",
+    ingredients: [
+      {
+        name: "potato",
+        amount: "5000",
+        cost: "1000000",
+      },
+    ],
+    methods: ["fry"],
+    prepTime: "5min",
+    cost: "1000000$",
+    keywords: ["potato", "fat", "ketchup"],
+    preferences: [""],
+    category: ["vegan", "glutenfree", "sugarshock"],
+    steps: ["step 1", "step 2", "step 3"],
+  };
+
   return (
     <div className="App">
       <Searchbar recipes={allRecipes} />
+      <RecipeCard recipe={mockData} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="text-green-500">Hello Vite + React!</p>
