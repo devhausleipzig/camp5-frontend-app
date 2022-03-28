@@ -1,4 +1,4 @@
-import api from "./api"
+import api from "./api";
 import { Recipe } from "./types";
 
 export const getRecipes = async (): Promise<Recipe[]> => {
