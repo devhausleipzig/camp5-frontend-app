@@ -23,7 +23,7 @@ function App() {
       <Searchbar recipes={allRecipes} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-red-500">Hello Vite + React!</p>
+        <p className="text-green-500">Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
