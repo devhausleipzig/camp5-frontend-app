@@ -5,7 +5,7 @@ const CustomIcon = ({ to, children }: LinkProps) => {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <Link className={`${match ? "underline" : "text-ricewhite"}`} to={to}>
+    <Link className={`${match ? "icon-glow" : "icon-shadow"}`} to={to}>
       {children}
     </Link>
   );

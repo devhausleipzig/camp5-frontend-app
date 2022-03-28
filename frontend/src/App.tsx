@@ -1,7 +1,6 @@
-
 import NavBar from "./layout/NavBar";
 import { useEffect, useState } from "react";
-import { createRoutesFromChildren } from "react-router-dom";
+import { createRoutesFromChildren, Route, Routes } from "react-router-dom";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
 import { getRecipes } from "./utils/fetchRecipes";
@@ -21,7 +20,6 @@ function App() {
   }, []);
 
   return (
-    
     <div>
       <NavBar />
     </div>
