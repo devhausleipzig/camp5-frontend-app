@@ -31,12 +31,6 @@ export default function Searchbar({ recipes }: SearchbarProps) {
               displayValue={(recipe: Recipe) => recipe.recipeName}
               onChange={(event) => setQuery(event.target.value)}
             />
-            <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <SelectorIcon
-                className="w-5 h-5 text-gray-400"
-                aria-hidden="true"
-              />
-            </Combobox.Button>
           </div>
           <Transition
             as={Fragment}

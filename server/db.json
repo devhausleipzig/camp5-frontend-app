@@ -44,6 +44,44 @@
       "preferences": [],
       "category": "",
       "steps": []
+    },
+    {
+      "id": "2",
+      "recipeName": "pizza",
+      "picture": "url...",
+      "ingredients": [
+        {
+          "name": "potato",
+          "amount": 5000,
+          "cost": 1000000
+        }
+      ],
+      "methods": ["fry"],
+      "prep_time": "5min",
+      "cost": "1000000$",
+      "keywords": ["potato", "fat", "ketchup"],
+      "preferences": [],
+      "category": "",
+      "steps": []
+    },
+    {
+      "id": "3",
+      "recipeName": "spaghetti",
+      "picture": "url...",
+      "ingredients": [
+        {
+          "name": "potato",
+          "amount": 5000,
+          "cost": 1000000
+        }
+      ],
+      "methods": ["fry"],
+      "prep_time": "5min",
+      "cost": "1000000$",
+      "keywords": ["potato", "fat", "ketchup"],
+      "preferences": [],
+      "category": "",
+      "steps": []
     }
   ],
   "global_options": [
