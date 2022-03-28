@@ -1,10 +1,10 @@
 # Installation
 
 1. clone the repo
-1. run `pnpm install` in the 'frontend' folder
-1. run `pnpm install` in the 'server' folder
-1. type `pnpm run start` in one shell run the server
-1. type `pnpm run dev` in another shell to start preview
+2. run `pnpm install` in the 'frontend' folder
+3. run `pnpm install` in the 'server' folder
+4. type `pnpm run start` in one shell run the server
+5. type `pnpm run dev` in another shell to start preview
 
 ## Troubleshooting
 
