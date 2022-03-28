@@ -1,0 +1,122 @@
+{
+  "Animal foods": [
+    "Bovines",
+    "Swine",
+    "Poultry",
+    "Venison",
+    "Equines",
+    "Lagomorphs",
+    "Ovis",
+    "Caprae"
+  ],
+  "Aquatic foods": [
+    "Mollusks",
+    "Seaweed",
+    "Crustaceans",
+    "Fishes",
+    "Cetaceans",
+    "Other aquatic foods",
+    "Pinnipeds",
+    "Amphibians",
+    "Fish products",
+    "Roe",
+    "Bivalvia"
+  ],
+  "Baking goods": [
+    "Seasonings",
+    "Dressings",
+    "Sauces",
+    "Substitutes",
+    "Sugars",
+    "Condiments",
+    "Wrappers"
+  ],
+  "Beverages": [
+    "Fermented beverages",
+    "Distilled beverages",
+    "Fortified wines",
+    "Alcoholic beverages",
+    "Waters",
+    "Other beverages",
+    "Nutritional beverages"
+  ],
+  "Cereals and cereal products": [
+    "Cereals",
+    "Other breads",
+    "Cereal products",
+    "Doughs",
+    "Flat breads",
+    "Leavened breads",
+    "Bread products",
+    "Sweet breads"
+  ],
+  "Cocoa and cocoa products": [
+    "Cocoa",
+    "Cocoa products"
+  ],
+  "Coffee and coffee products": [
+    "Coffee",
+    "Coffee products"
+  ],
+  "Confectioneries": [
+    "Frozen desserts",
+    "Other confectioneries",
+    "Candies",
+    "Desserts",
+    "Spreads",
+    "Milk desserts"
+  ],
+  "Fats and oils": [
+    "Animal fats",
+    "Vegetable fats"
+  ],
+  "Fruits": [
+    "Tropical fruits",
+    "Citrus",
+    "Pomes",
+    "Berries",
+    "Other fruits",
+    "Drupes",
+    "Fruit products"
+  ],
+  "Herbs and spices": [
+    "Herbs",
+    "Spices",
+    "Oilseed crops",
+    "Other seeds",
+    "Herb and spice mixtures"
+  ],
+  "Milk and milk products": [
+    "Fermented milk products",
+    "Unfermented milks",
+    "Other milk products",
+    "Fermented milks"
+  ],
+  "Pulses": [
+    "Peas",
+    "Lentils",
+    "Other pulses",
+    "Beans"
+  ],
+  "Soy": [
+    "Soy products"
+  ],
+  "Teas": [
+    "Herbal teas"
+  ],
+  "Vegetables": [
+    "Cabbages",
+    "Onion-family vegetables",
+    "Root vegetables",
+    "Shoot vegetables",
+    "Leaf vegetables",
+    "Fruit vegetables",
+    "Tubers",
+    "Stalk vegetables",
+    "Other vegetables",
+    "Mushrooms",
+    "Vegetable products",
+    "Brassicas",
+    "Green vegetables"
+  ]
+}
