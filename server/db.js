@@ -17,8 +17,19 @@ const restrictedDiets = JSON.parse(
   fs.readFileSync("./enums/restricted-diets.json")
 );
 
+const getUsersData = JSON.parse(
+  fs.readFileSync("./data/usersdata.json")
+);
+
+// rewrite whole Users data (which not optimal)
+// TODO: get 'user_id' to update one user and modifiy it
+/*
+const SaveUsersData = JSON.stringify(
+  fs.writeFileSync("./data/usersdata.json")
+);
+*/
 module.exports = () => ({
-  user: [],
+  user: getUsersData,
   recipes: [
     {
       id: "1",
@@ -31,7 +42,7 @@ module.exports = () => ({
           cost: 1000000,
         },
       ],
-      methods: ["fry"],
+      methods: "fry",
       prep_time: "5min",
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
@@ -50,7 +61,7 @@ module.exports = () => ({
           cost: 1000000,
         },
       ],
-      methods: ["fry"],
+      methods: "bake",
       prep_time: "5min",
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
@@ -69,7 +80,7 @@ module.exports = () => ({
           cost: 1000000,
         },
       ],
-      methods: ["fry"],
+      methods: "boil",
       prep_time: "5min",
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],

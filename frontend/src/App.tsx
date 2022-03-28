@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
-import { getRecipes } from "./utils/fetchRecipes";
+import { getRecipes, getFilteredRecipes } from "./utils/fetchRecipes";
 import type { Recipe } from "./utils/types";
 
 function App() {
@@ -11,6 +11,11 @@ function App() {
 
   async function fetchAllRecipes(): Promise<Recipe[]> {
     const response: Recipe[] = await getRecipes();
+    //comment out first line above, and uncomment lines below to test filter feature: 
+    /*
+    await getRecipes();
+    const response: Recipe[] = await getFilteredRecipes('bake','any');
+    */
     setAllRecipes(response);
     return allRecipes;
   }
