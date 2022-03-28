@@ -1,4 +1,5 @@
-import NavBar from "./layout/NavBar";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 import { useEffect, useState } from "react";
 import { createRoutesFromChildren, Route, Routes } from "react-router-dom";
 import Searchbar from "./components/searchbar";
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <Header />
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Link, LinkProps } from "react-router-dom";
 
-const NavBar = () => {
+const Header = () => {
   // Good! Multiline wrapped in ( ... )
   // also has a single top level node.
   return (
@@ -11,10 +11,7 @@ const NavBar = () => {
       <div className="flex mt-10 bg-green p-4 h-navh w-8/12 justify-evenly items-center border-ricewhite rounded-full border-1 m-auto drop-shadow">
         <div className="relative flex flex-col space-y-0">
           <CustomIcon to={"/basket"}>
-            <img
-              className="icon-shadow"
-              src="../../assets/icons/shopping-cart-icon.svg"
-            />
+            <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
           <p className="text-ricewhite absolute top-7 left-2 icon-shadow">
             basket
@@ -23,10 +20,7 @@ const NavBar = () => {
         <img className="icon-shadow" src="../../assets/icons/logo-carrot.svg" />
         <div className="relative flex flex-col space-y-0">
           <CustomIcon to={"#"}>
-            <img
-              className="icon-shadow"
-              src="../../assets/icons/profile-icon.svg"
-            />
+            <img src="../../assets/icons/profile-icon.svg" />
           </CustomIcon>
           <p className="text-ricewhite text-shadow-lg absolute top-7 left-1">
             profile
@@ -41,4 +35,4 @@ const NavBar = () => {
   ); // <- )
 };
 
-export default NavBar;
+export default Header;
