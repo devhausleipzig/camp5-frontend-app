@@ -3,7 +3,6 @@
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.7",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "autoprefixer": "^10.4.4",
