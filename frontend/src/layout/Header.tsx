@@ -8,7 +8,7 @@ const Header = () => {
   return (
     // <- (
     <div className="font-poppins font-semibold text-xxs">
-      <div className="flex mt-10 bg-green p-4 h-navh w-navw justify-evenly items-center border-ricewhite rounded-full border-1 m-auto drop-shadow">
+      <div className="flex mt-10 p-4 h-navh w-navw justify-evenly items-center border-ricewhite rounded-full border-2 m-auto drop-shadow">
         <div className="relative flex flex-col space-y-0">
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
