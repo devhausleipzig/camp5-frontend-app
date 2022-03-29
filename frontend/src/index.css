@@ -3,3 +3,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .flip-card-wrapper {
+    @apply absolute  w-full h-full flex items-center justify-center;
+  }
+
+  #flip-card {
+    @apply transition-all ease-linear duration-500 w-28 h-28 rounded-3xl bg-rice-white border-2 border-b-dark-brown flex flex-col items-center justify-center p-4;
+  }
+
+  .flip-card-inner {
+    @apply relative w-24 h-24 transition-all ease-linear duration-500;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute  w-24 h-24 flex items-center justify-center transition-all ease-linear duration-500;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
