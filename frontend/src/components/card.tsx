@@ -8,6 +8,7 @@ export type CardProps = {
 };
 
 const RecipeCard = ({ recipe }: CardProps) => {
+  console.log(recipe);
   const [flip, SetFlip] = useState<string>("rotateY(360deg)");
 
   const flipcardInnerStyle = {
