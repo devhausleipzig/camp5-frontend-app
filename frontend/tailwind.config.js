@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
   mode: "jit",
   theme: {
@@ -27,8 +28,8 @@ module.exports = {
       spacing: {
         navh: "3.125rem",
         navw: "62.5%",
-        cardw: "16.25rem",
-        cardh: "20rem",
+        cardw: "81.25%",
+        cardh: "56.34%",
       },
     },
   },
