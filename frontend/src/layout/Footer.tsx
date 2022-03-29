@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     // <- (
     <div className="fixed bottom-0 w-full font-poppins font-semibold text-xxs">
-      <div className="flex mb-10 bg-green p-4 h-navh w-navw justify-around items-center border-ricewhite rounded-full border-1 m-auto drop-shadow">
+      <div className="flex mb-10 p-4 h-navh w-navw justify-around items-center border-ricewhite rounded-full border-2 m-auto drop-shadow">
         <div className="relative flex flex-col">
           <CustomIcon to={"/search"}>
             <img src="../../assets/icons/search-icon.svg" />
