@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
+  mode: "jit",
   theme: {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
@@ -25,7 +26,7 @@ module.exports = {
       },
       spacing: {
         navh: "3.125rem",
-        navw: "12.5rem",
+        navw: "62.5%",
         cardw: "16.25rem",
         cardh: "20rem",
       },
