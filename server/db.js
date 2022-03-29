@@ -23,7 +23,7 @@ module.exports = () => ({
     {
       id: "1",
       recipeName: "potato",
-      picture: "url...",
+      picture: "/assets/pics/test.png",
       ingredients: [
         {
           name: "potato",

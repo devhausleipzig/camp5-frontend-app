@@ -14,7 +14,12 @@ module.exports = {
       darkbrown: "#513131",
       white: "#FFFFFF",
     },
-    extend: {},
+
+    extend: {
+      backgroundImage: {
+        "recipe-img": "url('/assets/pics/test.png')",
+      },
+    },
   },
   plugins: [],
 };

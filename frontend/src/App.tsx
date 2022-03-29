@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
 import RecipeCard from "./components/card";
+import RecipeCardFront from "./components/recipecard-front";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
 import { getRecipes } from "./utils/fetchRecipes";
@@ -21,7 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <Searchbar recipes={allRecipes} />
+      {allRecipes.length && (
+        <RecipeCardFront
+          img={allRecipes[0].picture}
+          recipeName={allRecipes[0].recipeName}
+        />
+      )}
       {allRecipes.length && <RecipeCard recipe={allRecipes[0]} />}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
