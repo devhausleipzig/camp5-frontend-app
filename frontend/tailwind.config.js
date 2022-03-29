@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
   theme: {
     fontFamily: {
@@ -25,9 +26,9 @@ module.exports = {
       },
       spacing: {
         navh: "3.125rem",
-        navw: "12.5rem",
-        cardw: "16.25rem",
-        cardh: "20rem",
+        navw: "62.5%",
+        cardw: "81.25%",
+        cardh: "56.34%",
       },
     },
   },
