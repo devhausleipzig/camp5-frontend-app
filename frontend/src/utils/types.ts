@@ -55,18 +55,10 @@ export type GlobalOptions = [
 
 
 
-// some fixed types for filter function:
-export type CookingTime = 'quick' | 'regular' | 'long' | 'any';
-export type CookingMethod = 'fry' | 'boil' | 'roast' | 'steam' | 'grill' | 'bake' | 'any';
 
-export type RecipeFilter = {
-  recipeName: string;
-  id: string;
-  ingredients: Ingredient[];
-  methods: CookingMethod;
-  prepTime: CookingTime;
-  cost: string;
-  keywords: Partial<GlobalOptions>;
-  preferences: Partial<GlobalOptions>;
-  category: Partial<GlobalOptions>;
-};
+export type FilterParams = {
+  method?: string,
+  preptime?: string,
+  cost?: string
+}
+
