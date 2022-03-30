@@ -25,7 +25,8 @@ export const getFilteredRecipes = (method: string = "any", preptime: string = "a
     if(cost != 'any') filter.cost = cost;
   
     return  recipes.filter((rcp) => {
-      for (let key in filter) {
+      let key: keyof FilterParams
+      for (key in filter) {
           if(rcp[key] != undefined && rcp[key] === filter[key]) return true
       }
       return false;
