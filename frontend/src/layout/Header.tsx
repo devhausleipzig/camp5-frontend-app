@@ -8,22 +8,22 @@ const Header = () => {
   // also has a single top level node.
   return (
     // <- (
-    <div className="font-poppins font-semibold text-xxs">
-      <div className="flex mt-10 p-4 h-navh w-navw justify-evenly items-center border-ricewhite rounded-full border-2 m-auto drop-shadow">
-        <div className="relative flex flex-col space-y-0">
+    <div className="font-poppins font-semibold text-xxs tracking-wider">
+      <div className="flex mt-10 py-7 h-navh w-navw justify-evenly items-center border-ricewhite rounded-full border-2 m-auto shadow-drop">
+        <div className="flex flex-col items-center">
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite absolute top-7 left-2 icon-shadow">
+          <p className="text-ricewhite">
             basket
           </p>
         </div>
         <img className="icon-shadow" src="../../assets/icons/logo-carrot.svg" />
-        <div className="relative flex flex-col space-y-0">
+        <div className="flex flex-col items-center">
           <CustomIcon to={"#"}>
             <img src="../../assets/icons/profile-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite text-shadow-lg absolute top-7 left-1">
+          <p className="text-ricewhite">
             profile
           </p>
         </div>

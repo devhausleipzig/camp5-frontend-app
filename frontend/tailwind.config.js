@@ -8,8 +8,7 @@ module.exports = {
       ptserif: ["PT Serif", "serif"],
     },
     fontSize: {
-      xxs: ".625rem", //text on footer and header under icons
-      s: "", //recipe titles, ingredients, method and shopping lists
+      xxs: "9pt",
     },
     colors: {
       green: "#8BBC78",
@@ -22,7 +21,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        md: "0 0.1rem 0.2rem rgba(0, 0, 0, 0.24), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.8rem rgba(0, 0, 0, 0.18)",
+        drop: "0 0.1rem 0.2rem rgba(0, 0, 0, 0.24), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.8rem rgba(0, 0, 0, 0.18)",
         inner:
           "inset 0.4rem 0.4rem 1rem 0 rgba(255, 0, 0, 0.25), inset -0.4rem -0.4rem 1rem 0 rgba(255, 0, 0, 0.25)",
       },
@@ -31,6 +30,11 @@ module.exports = {
         navw: "62.5%",
         cardw: "81.25%",
         cardh: "56.34%",
+        cardheaderh: "3.75rem",
+        buttonh: "10.56%",
+        smallbuttonw: "5.625rem",
+        midbuttonw: "7.5rem",
+        bigbuttonw: "14.688rem",
       },
     },
   },
