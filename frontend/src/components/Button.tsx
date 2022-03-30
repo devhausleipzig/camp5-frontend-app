@@ -1,18 +1,9 @@
 import { LinkProps } from "react-router-dom";
+import { Button } from "@chakra-ui/react";
+import React from "react";
 
-export type IconButtonProps = {
-    iconButtonType: 'basket' | 'profile' | 'search' | 'discover';
-    onClick: () => void;
-    isActive: boolean;
-};
-
-const IconButton = ({
-    isActive,
-    iconButtonType,
-    onClick,
-}: IconButtonProps): JSX.Element => {
-    const active = {
-        fill:
-            iconButtonType !== 
-    }
+export function IconButton() {
+    return (
+        <Button
+    )
 }
