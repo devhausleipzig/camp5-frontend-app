@@ -4,6 +4,6 @@ import React from "react";
 
 export function IconButton() {
     return (
-        <Button
+        <Button/>
     )
 }

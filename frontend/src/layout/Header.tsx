@@ -1,6 +1,7 @@
 import React from "react";
 import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Link, LinkProps } from "react-router-dom";
+import { Icon } from "../components/icons/grab-icon";
 
 const Header = () => {
   // Good! Multiline wrapped in ( ... )
@@ -13,7 +14,7 @@ const Header = () => {
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite absolute top-7 left-2 text-shadow-lg">
+          <p className="text-ricewhite absolute top-7 left-2 icon-shadow">
             basket
           </p>
         </div>
