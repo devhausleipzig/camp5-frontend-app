@@ -1,7 +1,7 @@
 import React from "react";
 import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Link, LinkProps } from "react-router-dom";
-import { Icon } from "../components/icons/grab-icon";
+
 
 const Header = () => {
   // Good! Multiline wrapped in ( ... )
