@@ -29,6 +29,8 @@ module.exports = {
         navw: "62.5%",
         cardw: "81.25%",
         cardh: "56.34%",
+        cardheaderh: "3.75rem",
+        buttonh: "10.56%",
       },
     },
   },
