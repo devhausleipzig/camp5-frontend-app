@@ -53,8 +53,18 @@ export type GlobalOptions = [
   }
 ];
 
+export type InputBoxProps ={
+  inputType : 'text' | 'email' | 'number' | 'password' | 'checkbox',
+  inputValue: string,
+  placeholder: string,
+  dataHandler: Function
 
+}
 
+export type FormButtonProps = {
+  label: string,
+  type: 'submit' | 'reset' | 'button'
+}
 
 export type FilterParams = {
   method?: string,

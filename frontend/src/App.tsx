@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
 import Searchbar from "./components/searchbar";
+import FormComponent from "./components/FormComponent";
 import logo from "./logo.svg";
 import { getRecipes, getFilteredRecipes } from "./utils/fetchRecipes";
-import type { Recipe } from "./utils/types";
+import type { Recipe, FormButtonProps } from "./utils/types";
+import FormButton from "./components/FormButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,8 +20,17 @@ function App() {
     fetchAllRecipes();
   }, []);
 
+  const btnTypeProps:FormButtonProps ={
+   label:'Signup',
+   type:'submit'
+  }
+  return(
+    <FormComponent formType="signup" btnReact={FormButton(btnTypeProps) }/>
+  )
+/*
   return (
     <div className="App">
+      <FormComponent />
       <Searchbar recipes={allRecipes} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -54,6 +65,7 @@ function App() {
       </header>
     </div>
   );
+*/
 }
 
 
