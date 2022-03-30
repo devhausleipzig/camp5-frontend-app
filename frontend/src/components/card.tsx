@@ -2,12 +2,22 @@ import React, { useState } from "react";
 import { Recipe } from "../utils/types";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import RecipeCardBack from "./recipecard-back";
+import RecipeCardFront from "./recipecard-front";
 
 export type CardProps = {
   recipe: Recipe;
+  contentInfo: string[];
+  contentIngredients: { name: string; amount: number; cost: number }[];
+  contentSteps: string[];
 };
 
-const RecipeCard = ({ recipe }: CardProps) => {
+const RecipeCard = ({
+  recipe,
+  contentInfo,
+  contentIngredients,
+  contentSteps,
+}: CardProps) => {
   console.log(recipe);
   const [flip, SetFlip] = useState<string>("rotateY(360deg)");
 
@@ -34,10 +44,10 @@ const RecipeCard = ({ recipe }: CardProps) => {
         >
           <div className="flip-card-inner" id="flip-card-inner">
             <div className="flip-card-front" id="flip-card-front">
-              <div className="text-2xl w-24 h-24">
-                <h2>{recipe.recipeName}</h2>
-                <img src={recipe.picture} alt="" />
-              </div>
+              <RecipeCardFront
+                img={recipe.picture}
+                recipeName={recipe.recipeName}
+              />
             </div>
             <div
               onClick={flipCard}
@@ -46,39 +56,25 @@ const RecipeCard = ({ recipe }: CardProps) => {
             >
               <Carousel showThumbs={false}>
                 {backSides.map((page, i) => (
-<<<<<<< HEAD
                   <div key={page} className="w-24 h-24 bg-rice-white">
                     {backSides[i] === "info" ? (
-=======
-                  <div key={page} className="w-24 h-24 bg-ricewhite">
-                    {page[i] === "info" ? (
->>>>>>> 803077222271a1381705dc066cd285712031b73a
-                      <ul className="text-2xl w-24 h-24 flex flex-col justify-center items-center">
-                        {recipe.category.map((item) => (
-                          <li className="text-lg text-darkbrown" key={item}>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      <RecipeCardBack
+                        backSide="info"
+                        contentInfo={contentInfo}
+                        recipeName={recipe.recipeName}
+                      />
                     ) : backSides[i] === "ingredients" ? (
-                      <ul className="text-2xl w-24 h-24 flex flex-col justify-center items-center">
-                        {recipe.ingredients.map((item) => (
-                          <li
-                            className="text-lg text-darkbrown"
-                            key={item.name}
-                          >
-                            {item.name}
-                          </li>
-                        ))}
-                      </ul>
+                      <RecipeCardBack
+                        backSide="ingredients"
+                        contentIngredients={contentIngredients}
+                        recipeName={recipe.recipeName}
+                      />
                     ) : (
-                      <ul className="text-2xl w-24 h-24 flex flex-col justify-center items-center">
-                        {recipe.steps.map((item) => (
-                          <li className="text-lg text-darkbrown" key={item}>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      <RecipeCardBack
+                        backSide="steps"
+                        contentSteps={contentSteps}
+                        recipeName={recipe.recipeName}
+                      />
                     )}
                   </div>
                 ))}

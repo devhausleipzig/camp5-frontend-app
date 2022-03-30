@@ -26,7 +26,7 @@ export type Recipe = {
   recipeName: string;
   id: string;
   picture: string;
-  ingredients: Ingredient[];
+  ingredients: { name: string; amount: number; cost: number }[];
   methods: string[];
   prepTime: string;
   cost: string;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
 import RecipeCard from "./components/card";
 import RecipeCardFront from "./components/recipecard-front";
+import RecipeCardBack from "./components/recipecard-back";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
 import { getRecipes } from "./utils/fetchRecipes";
@@ -23,12 +24,26 @@ function App() {
   return (
     <div className="App">
       {allRecipes.length && (
-        <RecipeCardFront
-          img={allRecipes[0].picture}
-          recipeName={allRecipes[0].recipeName}
+        <>
+          <RecipeCardFront
+            img={allRecipes[0].picture}
+            recipeName={allRecipes[0].recipeName}
+          />
+          <RecipeCardBack
+            backSide="info"
+            contentInfo={allRecipes[0].category}
+            recipeName={allRecipes[0].recipeName}
+          />
+        </>
+      )}
+      {allRecipes.length && (
+        <RecipeCard
+          recipe={allRecipes[0]}
+          contentInfo={allRecipes[0].category}
+          contentIngredients={allRecipes[0].ingredients}
+          contentSteps={[]}
         />
       )}
-      {allRecipes.length && <RecipeCard recipe={allRecipes[0]} />}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="text-green-500">Hello Vite + React!</p>
