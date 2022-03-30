@@ -47,7 +47,7 @@ const RecipeCard = ({ recipe }: CardProps) => {
               <Carousel showThumbs={false}>
                 {backSides.map((page, i) => (
                   <div key={page} className="w-24 h-24 bg-rice-white">
-                    {page[i] === "info" ? (
+                    {backSides[i] === "info" ? (
                       <ul className="text-2xl w-24 h-24 flex flex-col justify-center items-center">
                         {recipe.category.map((item) => (
                           <li className="text-lg text-dark-brown" key={item}>
@@ -55,7 +55,7 @@ const RecipeCard = ({ recipe }: CardProps) => {
                           </li>
                         ))}
                       </ul>
-                    ) : page[i] === "ingredients" ? (
+                    ) : backSides[i] === "ingredients" ? (
                       <ul className="text-2xl w-24 h-24 flex flex-col justify-center items-center">
                         {recipe.ingredients.map((item) => (
                           <li

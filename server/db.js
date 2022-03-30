@@ -23,10 +23,20 @@ module.exports = () => ({
     {
       id: "1",
       recipeName: "potato",
-      picture: "url...",
+      picture: "/assets/pics/test.png",
       ingredients: [
         {
           name: "potato",
+          amount: 5000,
+          cost: 1000000,
+        },
+        {
+          name: "MOREpotato",
+          amount: 5000,
+          cost: 1000000,
+        },
+        {
+          name: "EVENMOREpotato",
           amount: 5000,
           cost: 1000000,
         },
@@ -36,8 +46,8 @@ module.exports = () => ({
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
       preferences: [],
-      category: "",
-      steps: [],
+      category: ["1", "2", "3"],
+      steps: ["step1", "step2", "step3"],
     },
     {
       id: "2",
@@ -55,8 +65,8 @@ module.exports = () => ({
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
       preferences: [],
-      category: "",
-      steps: [],
+      category: [1, 2, 3],
+      steps: [1, 2, 3],
     },
     {
       id: "3",
