@@ -5,11 +5,14 @@
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.7",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "axios": "^0.26.1",
     "framer-motion": "^6.2.8",
+    "i": "^0.3.7",
     "json-server": "^0.17.0",
+    "npm": "^8.5.5",
     "react-router-dom": "^6.2.2",
     "slugid": "^3.0.0"
   },
