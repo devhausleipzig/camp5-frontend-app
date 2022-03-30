@@ -45,7 +45,7 @@ const recipesData = JSON.parse(
 
 module.exports = () => ({
   user: getUsersData,
-  recipes:recipesData ,
+  recipe:recipesData ,
   ingredient: ingredients,
   enums: {
     foodGroups: foodGroupEnums,
