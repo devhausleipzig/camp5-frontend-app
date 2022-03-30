@@ -8,7 +8,8 @@ module.exports = {
       ptserif: ["PT Serif", "serif"],
     },
     fontSize: {
-      xxs: ".625rem",
+      xxs: ".625rem", //text on footer and header under icons
+      s: "", //recipe titles, ingredients, method and shopping lists
     },
     colors: {
       green: "#8BBC78",

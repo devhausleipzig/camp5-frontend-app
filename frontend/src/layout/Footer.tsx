@@ -12,7 +12,7 @@ const Footer = () => {
           <CustomIcon to={"/search"}>
             <img src="../../assets/icons/search-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite absolute top-6 icon-shadow">search</p>
+          <p className="text-ricewhite absolute top-6 text-shadow-lg">search</p>
         </div>
         <div className="relative flex flex-col space-y-0">
           <CustomIcon to={"/"}>

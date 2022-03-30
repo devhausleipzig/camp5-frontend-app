@@ -13,7 +13,7 @@ const Header = () => {
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite absolute top-7 left-2 icon-shadow">
+          <p className="text-ricewhite absolute top-7 left-2 text-shadow-lg">
             basket
           </p>
         </div>
