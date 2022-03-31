@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App background h-screen">
       <Searchbar recipes={allRecipes} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -55,8 +55,5 @@ function App() {
     </div>
   );
 }
-
-
-
 
 export default App;

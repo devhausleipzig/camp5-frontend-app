@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
   theme: {
     fontFamily: {
@@ -14,7 +15,19 @@ module.exports = {
       darkbrown: "#513131",
       white: "#FFFFFF",
     },
-    extend: {},
+    extend: {
+      spacing: {
+        navh: "3.125rem",
+        navw: "62.5%",
+        cardw: "81.25%",
+        cardh: "56.34%",
+        cardheaderh: "3.75rem",
+        buttonh: "10.56%",
+        smallbuttonw: "5.625rem",
+        midbuttonw: "7.5rem",
+        bigbuttonw: "14.688rem",
+      },
+    },
   },
   plugins: [],
 };
