@@ -18,16 +18,12 @@ const Footer = () => {
         </div>
         <div className="w-min-[40px]"></div>
         <div className="flex flex-col items-center">
-          <CustomIcon to={"/"}>
+          <CustomIcon to="/">
             <img src="../../assets/icons/home-icon.svg" />
           </CustomIcon>
           <p className="text-ricewhite text-shadow-md">discover</p>
         </div>
       </div>
-      <Routes>
-        <Route path="/search" element={<Search />} />
-        <Route path="/" element={<Discover />} />
-      </Routes>
     </div>
   ); // <- )
 };

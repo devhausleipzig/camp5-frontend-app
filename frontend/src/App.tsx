@@ -8,6 +8,10 @@ import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
 import { getRecipes, getFilteredRecipes } from "./utils/fetchRecipes";
 import type { Recipe } from "./utils/types";
+import Discover from "./pages/Discover";
+import Search from "./pages/Search";
+import Basket from "./pages/Basket";
+import Profile from "./pages/Profile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,7 +29,14 @@ function App() {
   return (
     <div className="h-screen flex flex-col">
       <Header />
-      <div className="grow my-6 px-12"></div>
+      <div className="grow my-6 px-12">
+        <Routes>
+          <Route path="/search" element={<Search />} />
+          <Route path="/" element={<Discover />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

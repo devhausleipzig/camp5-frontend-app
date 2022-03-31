@@ -1,6 +1,6 @@
 import React from "react";
 import CustomIcon from "../components/CustomIcon";
-import { Route, Routes, Link, LinkProps } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Basket from "../pages/Basket";
 import Profile from "../pages/Profile";
 
@@ -19,16 +19,12 @@ const Header = () => {
         </div>
         <img className="icon-shadow" src="../../assets/icons/logo-carrot.svg" />
         <div className="flex flex-col items-center">
-          <CustomIcon to={"#"}>
+          <CustomIcon to={"/profile"}>
             <img src="../../assets/icons/profile-icon.svg" />
           </CustomIcon>
           <p className="text-ricewhite">profile</p>
         </div>
       </div>
-      <Routes>
-        <Route path="/basket" element={<Basket />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
     </div>
   ); // <- )
 };
