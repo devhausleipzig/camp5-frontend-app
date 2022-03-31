@@ -1,3 +1,5 @@
+import * as React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { useEffect, useState } from "react";
