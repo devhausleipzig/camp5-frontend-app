@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .icon-glow {
   filter: drop-shadow(0px 0px 0.8rem rgba(246, 248, 237, 1));
 }

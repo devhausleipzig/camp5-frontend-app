@@ -1,6 +1,6 @@
 import { Link, LinkProps, useMatch, useResolvedPath } from "react-router-dom";
 
-const CustomIcon = ({ to, children }: LinkProps) => {
+const RadioButtonSm = ({ to, children }: LinkProps) => {
   let resolved = useResolvedPath(to);
   let match = useMatch({ path: resolved.pathname, end: true });
 
@@ -11,4 +11,4 @@ const CustomIcon = ({ to, children }: LinkProps) => {
   );
 };
 
-export default CustomIcon;
+export default RadioButtonSm;
