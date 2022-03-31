@@ -9,11 +9,11 @@ function App() {
   const [count, setCount] = useState(0);
   const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
 
-  async function fetchAllRecipes(): Promise<Recipe[]> {
+  async function fetchAllRecipes(): Promise<void> {
     const response: Recipe[] = await getRecipes();
     setAllRecipes(response);
-    return allRecipes;
   }
+
   useEffect(() => {
     fetchAllRecipes();
   }, []);

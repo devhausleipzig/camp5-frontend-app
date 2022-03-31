@@ -1,5 +1,5 @@
 // third-party imports
-import { filter, gt, gte, lt, lte } from 'lodash';
+import { filter as loFilter, gt, gte, lt, lte } from 'lodash';
 import { inPlaceSort } from 'fast-sort';
 
 // local imports
@@ -20,6 +20,7 @@ export const sort = (sortBasis, direction) => {
 }
 
 export const and = (first: Boolean, second: Boolean): Boolean => {
+    console.log('inside and func', first, second)
     return first && second;
 }
 
@@ -63,13 +64,14 @@ export const excludesFilter = (tags, key, obj) => {
 };
 
 export const textFilter = (text, key, obj) => {
+    console.log('inside text filter', text, key, obj)
     if(!text){ return true; }
     return obj[key].includes(text);
 }
 
 export const mappedInequalityFilter = (inequality, map, key) => {
     const reference = map[key]
-    const keepPairs = filter(Object.entries(map), ([,value]) => inequality(value, reference) )
+    const keepPairs = loFilter(Object.entries(map), ([,value]) => inequality(value, reference) )
     const keepArray = keepPairs.map( (pair) => pair[0] )
     const keepSet = new Set(keepArray)
     return (obj) => {
@@ -80,7 +82,7 @@ export const mappedInequalityFilter = (inequality, map, key) => {
 export const composeFilters = (binaryOperator, filters: Array<Function>) => {
     return  (obj) => {
         let keep = true;
-        for (const filter in filters){
+        for (const filter of filters){
             //@ts-ignore
             keep = binaryOperator(keep, filter(obj));
             if (!keep) { return false; }

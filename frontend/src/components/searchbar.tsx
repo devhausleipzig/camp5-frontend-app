@@ -3,6 +3,7 @@ import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { Recipe, RecipeFilterParams } from "../utils/types";
 import { recipeFilter, sort } from '../utils/filters';
+import { filter } from "lodash";
 
 type SearchbarProps = {
   recipes: Recipe[];
@@ -13,20 +14,20 @@ const defaultParams: RecipeFilterParams = {};
 export default function Searchbar({ recipes }: SearchbarProps) {
   const [selected, setSelected] = useState();
   const [query, setQuery] = useState("");
-  const [queryParams, setQueryParams] = useState(defaultParams)
-
-  function handleAutoQuery(event){
-    const queryValue = event.target.value;
-
-    setQuery(queryValue)
-    setQueryParams({
-      'name': queryValue
-    })
-  }
+  const [filteredRecipes, setFilteredRecipes] = useState([])
 
   const user = {'avoidIngredients': []}; // replace with access to real user object
 
-  const filteredRecipes = recipes.filter(recipeFilter(user, queryParams));
+  function handleAutoQuery(event){
+    const queryValue = event.target.value;
+    setQuery(queryValue)
+
+    const queryParams: RecipeFilterParams = {
+      'name': queryValue
+    }
+
+    setFilteredRecipes( recipes.filter(recipeFilter(user, queryParams)) )
+  }
 
   return (
     <div className="w-72 fixed top-16">
@@ -36,6 +37,7 @@ export default function Searchbar({ recipes }: SearchbarProps) {
             <Combobox.Input
               className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-gray-900"
               displayValue={(recipe: Recipe) => recipe.name}
+              autoComplete='off'
               onChange={handleAutoQuery}
             />
           </div>

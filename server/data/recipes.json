@@ -1,7 +1,7 @@
 [
     {
       "id": "W7e5zVQ0Svuc1QPF7OFc_g",
-      "recipeName": "potato",
+      "name": "potato",
       "picture": "url...",
       "ingredients": [
         {
@@ -20,7 +20,7 @@
     },
     {
         "id": "jIX0B45lTSuNPpDblTWUwQ",
-        "recipeName": "pizza",
+        "name": "pizza",
         "picture": "url...",
         "ingredients": [
           {
@@ -39,7 +39,7 @@
       },
       {
         "id": "eFjj2QUgTQK8P0KkIj_2Fw",
-        "recipeName": "spaghetti",
+        "name": "spaghetti",
         "picture": "url...",
         "ingredients": [
           {

@@ -67,15 +67,15 @@ export type RecipeStep = {
 export type Recipe = {
   id: string,
   name: string,
-  picture: string,
-  prepTime: PrepTimeRating,
-  cost: CostRating,
-  steps: Array<RecipeStep>,
-  cuisineTags: Array<Cuisine>,
-  keywords: Array<string>,
+  picture?: string,
+  prepTime?: PrepTimeRating,
+  cost?: CostRating,
+  steps?: Array<RecipeStep>,
+  cuisineTags?: Array<Cuisine>,
+  keywords?: Array<string>,
   // below must be aggregated over all steps
-  ingredients: Array<Ingredient>,
-  methods: Array<Method>;
+  ingredients?: Array<Ingredient>,
+  methods?: Array<Method>;
 }
 
 // make this type more generic in the future

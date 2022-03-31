@@ -45,21 +45,22 @@ const RecipeFilterMap = {
 }
 
 export function recipeFilter(user, filterParams: RecipeFilterParams){
+  console.log(filterParams)
   const filters = [];
 
-  for (const [key, value] of Object.entries(filterParams)){
+  for (const [sharedKey, arg] of Object.entries(filterParams)){
     let newFilter;
 
-    if(key == "ingredients"){
-      newFilter = RecipeFilterMap[key]
-      newFilter = leftPartial(newFilter, user.avoidIngredients, value, key);
+    if(sharedKey == "ingredients"){
+      newFilter = RecipeFilterMap[sharedKey]
+      newFilter = leftPartial(newFilter, user.avoidIngredients, arg, sharedKey);
     } else {
-      newFilter = RecipeFilterMap[key]
-      newFilter = leftPartial(newFilter, value, key);
+      newFilter = RecipeFilterMap[sharedKey]
+      newFilter = leftPartial(newFilter, arg, sharedKey);
     }
 
     filters.push( newFilter )
   }
-
+  console.log('inside recipe filters', filters)
   return composeFilters(and, filters)
 }
