@@ -2,7 +2,6 @@ import React from "react";
 import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Link, LinkProps } from "react-router-dom";
 
-
 const Header = () => {
   // Good! Multiline wrapped in ( ... )
   // also has a single top level node.
