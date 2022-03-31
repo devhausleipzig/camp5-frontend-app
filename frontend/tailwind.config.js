@@ -1,6 +1,7 @@
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
+  mode: "jit",
   theme: {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],

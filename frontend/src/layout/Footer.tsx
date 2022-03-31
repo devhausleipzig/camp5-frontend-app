@@ -1,5 +1,7 @@
 import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Link, LinkProps } from "react-router-dom";
+import Discover from "../pages/Discover";
+import Search from "../pages/Search";
 
 const Footer = () => {
   // Good! Multiline wrapped in ( ... )
@@ -12,24 +14,16 @@ const Footer = () => {
           <CustomIcon to={"/search"}>
             <img src="../../assets/icons/search-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">
-            search
-          </p>
+          <p className="text-ricewhite">search</p>
         </div>
         <div className="w-min-[40px]"></div>
         <div className="flex flex-col items-center">
-          <CustomIcon to={"/"}>
+          <CustomIcon to="/">
             <img src="../../assets/icons/home-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite text-shadow-md">
-            discover
-          </p>
+          <p className="text-ricewhite text-shadow-md">discover</p>
         </div>
       </div>
-      <Routes>
-        <Route path="/search" element={""} />
-        <Route path="/" element={""} />
-      </Routes>
     </div>
   ); // <- )
 };

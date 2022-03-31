@@ -1,6 +1,8 @@
 import React from "react";
 import CustomIcon from "../components/CustomIcon";
-import { Route, Routes, Link, LinkProps } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Basket from "../pages/Basket";
+import Profile from "../pages/Profile";
 
 const Header = () => {
   // Good! Multiline wrapped in ( ... )
@@ -13,24 +15,16 @@ const Header = () => {
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">
-            basket
-          </p>
+          <p className="text-ricewhite">basket</p>
         </div>
         <img className="icon-shadow" src="../../assets/icons/logo-carrot.svg" />
         <div className="flex flex-col items-center">
-          <CustomIcon to={"#"}>
+          <CustomIcon to={"/profile"}>
             <img src="../../assets/icons/profile-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">
-            profile
-          </p>
+          <p className="text-ricewhite">profile</p>
         </div>
       </div>
-      <Routes>
-        <Route path="/basket" element={"#"} />
-        <Route path="/profile" element={"#"} />
-      </Routes>
     </div>
   ); // <- )
 };
