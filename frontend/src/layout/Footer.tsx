@@ -14,7 +14,7 @@ const Footer = () => {
           <CustomIcon to={"/search"}>
             <img src="../../assets/icons/search-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">search</p>
+          <p className="text-ricewhite text-shadow-md">search</p>
         </div>
         <div className="w-min-[40px]"></div>
         <div className="flex flex-col items-center">
