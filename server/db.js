@@ -1,4 +1,8 @@
 const fs = require("fs");
+const _ = require('lodash')
+
+// local imports
+const { renameKeys } = require('./utils/renameKeys')
 
 
 ///////////////
@@ -26,9 +30,18 @@ const restrictedDiets = JSON.parse(
 //// Data ////
 //////////////
 
-const ingredients = JSON.parse(
+let ingredients = JSON.parse(
   fs.readFileSync("./data/ingredients.json")
-);
+)
+
+ingredients = ingredients.map( (ingredient) => {
+  return renameKeys(ingredient, {
+    "name_scientific": "nameScientific",
+    "food_group": "foodGroup",
+    "food_subgroup": "foodSubgroup"
+  })
+})
+
 
 const getUsersData = JSON.parse(
   fs.readFileSync("./data/users.json")

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { createRoutesFromChildren } from "react-router-dom";
 import Searchbar from "./components/searchbar";
 import logo from "./logo.svg";
-import { getRecipes, getFilteredRecipes } from "./utils/fetchRecipes";
+import { api, getRecipes } from "./api";
 import type { Recipe } from "./utils/types";
 
 function App() {
