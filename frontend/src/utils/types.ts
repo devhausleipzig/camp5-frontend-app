@@ -26,20 +26,20 @@ export type Recipe = {
   recipeName: string;
   id: string;
   picture: string;
-  ingredients: Ingredient[];
-  methods: Partial<GlobalOptions>;
+  ingredients: { name: string; amount: number; cost: number }[];
+  methods: string[];
   prepTime: string;
   cost: string;
-  keywords: Partial<GlobalOptions>;
-  preferences: Partial<GlobalOptions>;
-  category: Partial<GlobalOptions>;
-  steps: []; //to be further defined!!!
+  keywords: string[];
+  preferences: string[];
+  category: string[];
+  steps: string[]; //to be further defined!!!
 };
 
 export type Ingredient = {
   name: string;
   amount: string;
-  cost: number;
+  cost: string;
 };
 
 export type GlobalOptions = [

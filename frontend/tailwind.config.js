@@ -37,6 +37,9 @@ module.exports = {
         midbuttonw: "7.5rem",
         bigbuttonw: "14.688rem",
       },
+      backgroundImage: {
+        "recipe-img": "url('/assets/pics/test.png')",
+      },
     },
   },
   plugins: [],
