@@ -6,6 +6,9 @@ module.exports = {
       poppins: ["Poppins", "sans-serif"],
       ptserif: ["PT Serif", "serif"],
     },
+    fontSize: {
+      xxs: "9pt",
+    },
     colors: {
       green: "#8BBC78",
       lightgreen: "#E7F5D9",
@@ -16,6 +19,11 @@ module.exports = {
       white: "#FFFFFF",
     },
     extend: {
+      boxShadow: {
+        drop: "0 0.1rem 0.2rem rgba(0, 0, 0, 0.24), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.8rem rgba(0, 0, 0, 0.18)",
+        inner:
+          "inset 0.4rem 0.4rem 1rem 0 rgba(255, 0, 0, 0.25), inset -0.4rem -0.4rem 1rem 0 rgba(255, 0, 0, 0.25)",
+      },
       spacing: {
         navh: "3.125rem",
         navw: "62.5%",
