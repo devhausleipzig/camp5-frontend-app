@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import RecipeCardBack from "./recipecard-back";
 import RecipeCardFront from "./recipecard-front";
 
+// create card props
 export type CardProps = {
   recipe: Recipe;
   contentInfo: string[];
@@ -19,6 +20,7 @@ const RecipeCard = ({
   contentSteps,
 }: CardProps) => {
   console.log(recipe);
+
   const [flip, SetFlip] = useState<string>("rotateY(360deg)");
 
   const flipcardInnerStyle = {
@@ -54,9 +56,15 @@ const RecipeCard = ({
               className="flip-card-back"
               id="flip-card-back"
             >
-              <Carousel showThumbs={false}>
+              <RecipeCardBack
+                backSide="info"
+                contentInfo={contentInfo}
+                recipeName={recipe.recipeName}
+              />
+
+              {/* <Carousel showThumbs={false} width="260px">
                 {backSides.map((page, i) => (
-                  <div key={page} className="w-24 h-24 bg-rice-white">
+                  <div key={page} className="w-[260px] h-[320px] bg-rice-white">
                     {backSides[i] === "info" ? (
                       <RecipeCardBack
                         backSide="info"
@@ -78,7 +86,7 @@ const RecipeCard = ({
                     )}
                   </div>
                 ))}
-              </Carousel>
+              </Carousel> */}
             </div>
           </div>
         </div>
@@ -87,3 +95,10 @@ const RecipeCard = ({
   );
 };
 export default RecipeCard;
+
+// Goals:
+//
+//a) Correct dimension of flipped card
+//b) set units responsive/relative
+// c) add backside of card when flipped
+//d) fix carousel

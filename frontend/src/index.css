@@ -9,18 +9,19 @@
     @apply absolute  w-full h-full flex items-center justify-center;
   }
 
-  #flip-card {
-    @apply transition-all ease-linear duration-500 w-28 h-28 rounded-3xl bg-ricewhite border-2 border-b-darkbrown flex flex-col items-center justify-center p-4;
+  .flip-card {
+    @apply transition-all ease-linear duration-500 w-[260px] h-[320px] rounded-[40px] bg-ricewhite flex flex-col items-center justify-center;
+    background-color: transparent;
   }
 
   .flip-card-inner {
-    @apply relative w-24 h-24 transition-all ease-linear duration-500;
+    @apply relative w-[260px] h-[320px] transition-all ease-linear duration-500;
     transform-style: preserve-3d;
   }
 
   .flip-card-front,
   .flip-card-back {
-    @apply absolute  w-24 h-24 flex items-center justify-center transition-all ease-linear duration-500;
+    @apply absolute  w-[260px] h-[320px] flex items-center justify-center transition-all ease-linear duration-500;
     backface-visibility: hidden;
   }
 
