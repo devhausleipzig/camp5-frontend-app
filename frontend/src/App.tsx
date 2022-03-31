@@ -23,8 +23,9 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Header />
+      <div className="grow my-6 px-12"></div>
       <Footer />
     </div>
   );
