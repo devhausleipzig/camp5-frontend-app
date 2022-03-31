@@ -1,5 +1,11 @@
+import RadioButtonGroup from "../components/RadioButtonGroup";
+
 const Profile = () => {
-  return <div></div>;
+  return (
+    <div>
+      <RadioButtonGroup />
+    </div>
+  );
 };
 
 export default Profile;

@@ -1,6 +1,5 @@
 const fs = require("fs");
 
-
 ///////////////
 //// Enums ////
 ///////////////
@@ -21,23 +20,15 @@ const restrictedDiets = JSON.parse(
   fs.readFileSync("./enums/restricted-diets.json")
 );
 
-
 //////////////
 //// Data ////
 //////////////
 
-const ingredients = JSON.parse(
-  fs.readFileSync("./data/ingredients.json")
-);
+const ingredients = JSON.parse(fs.readFileSync("./data/ingredients.json"));
 
-const getUsersData = JSON.parse(
-  fs.readFileSync("./data/users.json")
-);
+const getUsersData = JSON.parse(fs.readFileSync("./data/users.json"));
 
-const recipesData = JSON.parse(
-  fs.readFileSync("./data/recipes.json")
-);
-
+const recipesData = JSON.parse(fs.readFileSync("./data/recipes.json"));
 
 ////////////////
 //// Export ////
@@ -45,13 +36,29 @@ const recipesData = JSON.parse(
 
 module.exports = () => ({
   user: getUsersData,
-  recipe:recipesData ,
+  recipe: recipesData,
   ingredient: ingredients,
   enums: {
     foodGroups: foodGroupEnums,
     foodGroupSubgroups: foodGroupSubgroups,
     foodNames: foodNameEnums,
     foodSubgroups: foodSubgroupEnum,
-    restrictedDiets: restrictedDiets
-  }
+    restrictedDiets: restrictedDiets,
+  },
+  allergens: [
+    "celery",
+    "gluten",
+    "shellfish",
+    "egg",
+    "fish",
+    "lupin",
+    "milk",
+    "mollusc",
+    "mustard",
+    "peanut",
+    "sesame",
+    "soy",
+    "sulphur",
+    "tree nuts",
+  ],
 });

@@ -20,9 +20,9 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        drop: "0 0.1rem 0.2rem rgba(0, 0, 0, 0.24), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.8rem rgba(0, 0, 0, 0.18)",
+        drop: "0 0.1rem 0.2rem rgba(81, 49, 49, 0.24), 0 0.2rem 0.4rem rgba(81, 49, 49, 0.2), 0 0.1rem 0.8rem rgba(81, 49, 49, 0.18)",
         inner:
-          "inset 0.4rem 0.4rem 1rem 0 rgba(255, 0, 0, 0.25), inset -0.4rem -0.4rem 1rem 0 rgba(255, 0, 0, 0.25)",
+          "inset 0 0.1rem 0.2rem 0 rgba(81, 49, 49, 0.24), inset 0 0.2rem 0.4rem 0 rgba(81, 49, 49, 0.2), inset 0 0.1rem 0.8rem 0 rgba(81, 49, 49, 0.18)",
       },
       spacing: {
         navh: "3.125rem",
@@ -31,7 +31,8 @@ module.exports = {
         cardh: "56.34%",
         cardheaderh: "3.75rem",
         buttonh: "10.56%",
-        smallbuttonw: "5.625rem",
+        smallbuttonw: "40.625%",
+        smallbuttonh: "11.268%",
         midbuttonw: "7.5rem",
         bigbuttonw: "14.688rem",
       },
