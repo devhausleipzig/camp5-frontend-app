@@ -1,0 +1,50 @@
+[
+    {
+      "id": "xgYjwB8sRn-DNZb7BCI3bw",
+      "signinDate": "",
+      "userName": "user1",
+      "profilePicture": "",
+      "password": "",
+      "email": "",
+      "collection": [],
+      "userOptions": [
+        {
+          "preferences": [],
+          "categories": [],
+          "allergies": []
+        }
+      ],
+      "shopping_list": [
+        {
+          "name": "",
+          "amount": 0,
+          "cost": 0
+        }
+      ],
+      "suggestions": []
+    },
+      {
+        "id": "Fm85cuqZRiS235WOS-pX3g",
+        "signinDate": "",
+        "userName": "user2",
+        "profilePicture": "",
+        "password": "",
+        "email": "",
+        "collection": [],
+        "userOptions": [
+          {
+            "preferences": [],
+            "categories": [],
+            "allergies": []
+          }
+        ],
+        "shopping_list": [
+          {
+            "name": "",
+            "amount": 0,
+            "cost": 0
+          }
+        ],
+        "suggestions": []
+      }
+  ]

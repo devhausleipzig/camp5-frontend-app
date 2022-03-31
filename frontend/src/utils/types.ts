@@ -52,3 +52,13 @@ export type GlobalOptions = [
     keywords: string[];
   }
 ];
+
+
+
+
+export type FilterParams = {
+  method?: string,
+  preptime?: string,
+  cost?: string
+}
+
