@@ -1,50 +1,50 @@
 import InputBox from "./InputBox";
-import { InputBoxProps } from "../utils/types";
-import { FormEvent, ReactElement, useState } from "react";
+import { InputBoxProps, InputElementTypes as ieTypes } from "../utils/types";
+import { FormEvent, ReactElement, useEffect, useState } from "react";
 import FormButton from "./FormButton";
 type FormProps = {
-    formType : 'login' | 'signup',
-    btnReact: ReactElement
+  inputObjs: [];
+  buttonObjs: [];
 };
 
-export default function FormComponent({formType, btnReact}:FormProps) {
-    //TODO: make this FORM component, reuseble and general
-    //TODO: use forloop to create the inputs and 'useStates'  
-    const [userName, setUserName] = useState('');
-    const [userEmail, setUserEmail] = useState('');
-    const [userPassword, setUserPassword] = useState('');
+export default function FormComponent({ inputObjs, buttonObjs }: FormProps) {
+  const [inputFields, setInputField] = useState([]);
+  const [buttons, setButtons] = useState([]);
+  useEffect(() => {
+    setInputField(inputObjs);
+    setButtons(buttonObjs);
+  }, []);
 
-    function formDataHandler(e:FormEvent){
-        e.preventDefault();
-        try {
-            console.log('usrName: ',userName);
-            console.log('usrEmail: ',userEmail);
-            console.log('usrPassword: ',userPassword);
-        } catch (error) {
-            console.log('Err:FormSubmit: ', error);
-        }
-        setUserName('');
-        setUserEmail('');
-        setUserPassword('');
+  function inputBoxsDataHandler(index: any, event: any) {
+    console.log(index, event);
+  }
+  function formDataHandler(e: FormEvent) {
+    e.preventDefault();
+    console.log("form done");
+    try {
+      // console.log('usrName: ',userName);
+    } catch (error) {
+      console.log("Err:FormSubmit: ", error);
     }
+  }
   return (
     <div className="border-r-green border rounded-md mx-auto w-1/3 shadow-green bg-lightgreen">
       <form action="" method="post" onSubmit={formDataHandler}>
-        { formType=='signup' &&
-        <InputBox 
-        inputType="text" inputValue="" placeholder="your name." dataHandler={setUserName}
-        />}
+        {inputFields.map((ipt, index) => {
+          return (
+            // I used 'index' , instead of 'key' (key is reserved for React)
+            <InputBox
+              key={index}
+              index={index}
+              {...ipt}
+              dataHandler={inputBoxsDataHandler}
+            />
+          );
+        })}
 
-        <InputBox 
-        inputType="email" inputValue="" placeholder="your email." dataHandler={setUserEmail}
-        />
-        <InputBox
-          inputType="password"
-          inputValue=""
-          placeholder="your password." dataHandler={setUserPassword}
-        />
-        {btnReact}
-        {/* <FormButton type="submit" label={ formType=='login'? 'Login' : 'Signup'} /> */}
+        {buttons.map((btn, index) => {
+          return <FormButton key={index} index={index} {...btn} />;
+        })}
       </form>
     </div>
   );

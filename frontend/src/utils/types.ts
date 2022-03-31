@@ -53,17 +53,22 @@ export type GlobalOptions = [
   }
 ];
 
+export type InputElementTypes = 'text' | 'email' | 'number' | 'password' | 'checkbox';
 export type InputBoxProps ={
-  inputType : 'text' | 'email' | 'number' | 'password' | 'checkbox',
+  index:number,
+  inputType: InputElementTypes,
   inputValue: string,
   placeholder: string,
+  isRequired: boolean,
   dataHandler: Function
 
 }
 
+export type ButtonElementTypes = 'submit' | 'reset' | 'button' ;
 export type FormButtonProps = {
+  index:number,
   label: string,
-  type: 'submit' | 'reset' | 'button'
+  type: ButtonElementTypes
 }
 
 export type FilterParams = {

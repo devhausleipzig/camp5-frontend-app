@@ -4,7 +4,7 @@ import Searchbar from "./components/searchbar";
 import FormComponent from "./components/FormComponent";
 import logo from "./logo.svg";
 import { getRecipes, getFilteredRecipes } from "./utils/fetchRecipes";
-import type { Recipe, FormButtonProps } from "./utils/types";
+import { Recipe,InputBoxProps, FormButtonProps , InputElementTypes as ieTypes , ButtonElementTypes as btnTypes } from "./utils/types";
 import FormButton from "./components/FormButton";
 
 function App() {
@@ -20,12 +20,40 @@ function App() {
     fetchAllRecipes();
   }, []);
 
-  const btnTypeProps:FormButtonProps ={
-   label:'Signup',
-   type:'submit'
+  const formbuttons =[
+    {   label:'Login',
+    type:'submit' as btnTypes
+  },
+  {
+    label:'Signup',
+    type:'submit' as btnTypes
   }
+  ]
+
+  const formInputs =
+    [
+      {
+        inputType: "text" as ieTypes,
+        inputValue: "",
+        placeholder: "your name",
+        isRequired: true,
+      },
+      {
+        inputType: "email" as ieTypes,
+        inputValue: "",
+        placeholder: "your email",
+        isRequired: false,
+      },
+      {
+        inputType: "password" as ieTypes,
+        inputValue: "",
+        placeholder: "your password",
+        isRequired: false,
+      },
+    ]
+  
   return(
-    <FormComponent formType="signup" btnReact={FormButton(btnTypeProps) }/>
+    <FormComponent inputObjs={formInputs} buttonObjs={formbuttons} />
   )
 /*
   return (
