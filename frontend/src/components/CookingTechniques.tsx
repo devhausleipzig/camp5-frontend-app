@@ -3,10 +3,10 @@ import { api, getRecipes } from "../api";
 import { Recipe } from "../../src/utils/types";
 import RadioButtonSm from "./RadioButtonSm";
 import { Method } from "../utils/types";
+// import { useHistory } from "react-router-dom"
 
 
 const CookingTechniques = () => {
-    
     const methods = [
         "chop",
         "dice",
@@ -19,6 +19,9 @@ const CookingTechniques = () => {
         "bake",
         "grill"
     ]
+
+    // const history = useHistory()
+    // history.goBack()
 
   return (
     <div className="grid grid-cols-2 gap-4 content-center min-h-full">

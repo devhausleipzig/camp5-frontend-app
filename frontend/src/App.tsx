@@ -22,7 +22,7 @@ function App() {
       <div className="grow my-6 px-12 overflow-auto">
         <Routes>
           <Route path="/search" element={<Search />} />
-            <Route path="/search/cooking%20techniques" element={<CookingTechniques />} />   
+            <Route path="/search/cooking-techniques" element={<CookingTechniques />} />   
             <Route path="/search/ingredient" element={<Ingredient />} />   
             <Route path="/search/time" element={<Time />} />   
             <Route path="/search/cost" element={<Cost />} />   

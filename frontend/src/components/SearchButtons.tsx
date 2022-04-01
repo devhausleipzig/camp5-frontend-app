@@ -10,18 +10,22 @@ const SearchButtons = () => {
     {
       title: "cooking techniques",
       icon: CtIcon,
+      link: "/search/cooking-techniques"
     },
     {
       title: "ingredient",
       icon: IngredientsIcon,
+      link: "/search/ingredient"
     },
     {
       title: "time",
       icon: TimeIcon,
+      link: "/search/time"
     },
     {
       title: "cost",
       icon: CostIcon,
+      link: "/search/cost"
     },
   ];
 

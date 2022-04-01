@@ -10,18 +10,22 @@ const ProfileButtons = () => {
     {
       title: "favorites",
       icon: HeartIcon,
+      link: "/profile/favorites"
     },
     {
       title: "library",
       icon: LibIcon,
+      link: "/profile/library"
     },
     {
       title: "upload recipe",
       icon: UploadIcon,
+      link: "/profile/upload-recipe"
     },
     {
       title: "update preferences",
       icon: UpdateIcon,
+      link: "/profile/update-preferences"
     },
   ];
 
