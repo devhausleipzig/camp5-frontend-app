@@ -5,6 +5,10 @@ import Discover from "./pages/Discover";
 import Search from "./pages/Search";
 import Basket from "./pages/Basket";
 import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import RadioButtonSm from "./components/RadioButtonSm";
+import { ChakraProvider } from "@chakra-ui/react";
+import RadioButtonGroup from "./components/RadioButtonGroup";
 
 function App() {
   return (
@@ -16,6 +20,7 @@ function App() {
           <Route path="/" element={<Discover />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
       <Footer />

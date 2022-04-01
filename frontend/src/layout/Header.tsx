@@ -15,14 +15,14 @@ const Header = () => {
           <CustomIcon to={"/basket"}>
             <img src="../../assets/icons/shopping-cart-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">basket</p>
+          <p className="text-ricewhite text-shadow-md">basket</p>
         </div>
         <img className="icon-shadow" src="../../assets/icons/logo-carrot.svg" />
         <div className="flex flex-col items-center">
           <CustomIcon to={"/profile"}>
             <img src="../../assets/icons/profile-icon.svg" />
           </CustomIcon>
-          <p className="text-ricewhite">profile</p>
+          <p className="text-ricewhite text-shadow-md">profile</p>
         </div>
       </div>
     </div>
