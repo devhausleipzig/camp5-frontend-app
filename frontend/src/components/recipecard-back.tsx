@@ -54,7 +54,7 @@ const RecipeCardBack = ({
                 <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
                   {contentSteps?.map((e, i) => (
                     <ol>
-                      <li key={`${e.position}-${i}`}>{e}</li>
+                      <li key={`${e.position}-${i}`}>{JSON.stringify(e)}</li>
                     </ol>
                   ))}
                 </div>

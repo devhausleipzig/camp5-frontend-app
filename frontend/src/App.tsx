@@ -1,34 +1,29 @@
-import { useEffect, useState } from "react";
-import RecipeCard from "./components/card";
-
-import { createRoutesFromChildren } from "react-router-dom";
-import Searchbar from "./components/searchbar";
-import logo from "./logo.svg";
-import { api, getRecipes } from "./api";
-import type { Recipe } from "./utils/types";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import { Route, Routes } from "react-router-dom";
+import Discover from "./pages/Discover";
+import Search from "./pages/Search";
+import Basket from "./pages/Basket";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import RadioButtonSm from "./components/RadioButtonSm";
+import { ChakraProvider } from "@chakra-ui/react";
+import RadioButtonGroup from "./components/RadioButtonGroup";
 
 function App() {
-  const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
-
-  async function fetchAllRecipes(): Promise<void> {
-    const response: Recipe[] = await getRecipes();
-    setAllRecipes(response);
-  }
-
-  useEffect(() => {
-    fetchAllRecipes();
-  }, []);
-
   return (
-    <div className="App">
-      {allRecipes.length && (
-        <RecipeCard
-          recipe={allRecipes[0]}
-          contentInfo={allRecipes[0].dietaryRestrictions}
-          contentIngredients={allRecipes[0].ingredients}
-          contentSteps={allRecipes[0].steps}
-        />
-      )}
+    <div className="h-screen w-screen flex flex-col overflow-hidden">
+      <Header />
+      <div className="grow my-6 px-12 overflow-auto">
+        <Routes>
+          <Route path="/search" element={<Search />} />
+          <Route path="/" element={<Discover />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }

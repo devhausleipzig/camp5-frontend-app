@@ -26,7 +26,7 @@ const RecipeCard = ({
 
   return (
     <>
-      <div className="flip-card-wrapper">
+      <div className="flip-card-wrapper mt-8">
         <div
           className="flip-card"
           id="flip-card"

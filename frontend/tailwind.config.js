@@ -1,10 +1,14 @@
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./index.html"],
+  mode: "jit",
   theme: {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       ptserif: ["PT Serif", "serif"],
+    },
+    fontSize: {
+      xxs: "9pt",
     },
     colors: {
       green: "#8BBC78",
@@ -15,10 +19,11 @@ module.exports = {
       darkbrown: "#513131",
       white: "#FFFFFF",
     },
-
     extend: {
-      backgroundImage: {
-        "recipe-img": "url('/assets/pics/test.png')",
+      boxShadow: {
+        drop: "0 0.1rem 0.2rem rgba(81, 49, 49, 0.24), 0 0.2rem 0.4rem rgba(81, 49, 49, 0.2), 0 0.1rem 0.8rem rgba(81, 49, 49, 0.18)",
+        inner:
+          "inset 0 0.1rem 0.2rem 0 rgba(81, 49, 49, 0.24), inset 0 0.2rem 0.4rem 0 rgba(81, 49, 49, 0.2), inset 0 0.1rem 0.8rem 0 rgba(81, 49, 49, 0.18)",
       },
       spacing: {
         navh: "3.125rem",
@@ -27,9 +32,13 @@ module.exports = {
         cardh: "56.34%",
         cardheaderh: "3.75rem",
         buttonh: "10.56%",
-        smallbuttonw: "5.625rem",
+        smallbuttonw: "40.625%",
+        smallbuttonh: "11.268%",
         midbuttonw: "7.5rem",
         bigbuttonw: "14.688rem",
+      },
+      backgroundImage: {
+        "recipe-img": "url('/assets/pics/test.png')",
       },
     },
   },

@@ -1,8 +1,10 @@
+// third-party imports
 const fs = require("fs");
 const _ = require("lodash");
 
 // local imports
 const { renameKeys } = require("./utils/renameKeys");
+
 
 ///////////////
 //// Enums ////
@@ -28,7 +30,9 @@ const restrictedDiets = JSON.parse(
 //// Data ////
 //////////////
 
-let ingredients = JSON.parse(fs.readFileSync("./data/ingredients.json"));
+let ingredients = JSON.parse(
+  fs.readFileSync("./data/ingredients.json")
+);
 
 ingredients = ingredients.map((ingredient) => {
   return renameKeys(ingredient, {
@@ -38,104 +42,22 @@ ingredients = ingredients.map((ingredient) => {
   });
 });
 
-const getUsersData = JSON.parse(fs.readFileSync("./data/users.json"));
+const userData = JSON.parse(
+  fs.readFileSync("./data/users.json")
+);
 
-const recipesData = JSON.parse(fs.readFileSync("./data/recipes.json"));
+const recipeData = JSON.parse(
+  fs.readFileSync("./data/recipes.json")
+);
+
 
 ////////////////
 //// Export ////
 ////////////////
 
 module.exports = () => ({
-  user: [],
-  recipes: [
-    {
-      id: "1",
-      recipeName: "pizza potato",
-      picture: "/assets/pics/test.png",
-      ingredients: [
-        {
-          name: "potato",
-          amount: 5000,
-          cost: 1000000,
-        },
-        {
-          name: "MOREpotato",
-          amount: 5000,
-          cost: 1000000,
-        },
-        {
-          name: "EVENMOREpotato",
-          amount: 5000,
-          cost: 1000000,
-        },
-      ],
-      methods: ["fry"],
-      prep_time: "5min",
-      cost: "1000000$",
-      keywords: ["potato", "fat", "ketchup"],
-      preferences: [],
-      category: [
-        "vegan",
-        "glutenfree",
-        "transgender",
-        "yoga",
-        "lactosefree",
-        "virgin",
-        "kosher",
-        "halal",
-        "sugerfree",
-        "but sweet",
-        "esperanto",
-        "are you veda?",
-        "are you hungry?",
-        "no, I'm finnish",
-        "nordic walking",
-        "bouldern",
-      ],
-      steps: ["step1", "step2", "step3"],
-    },
-    {
-      id: "2",
-      recipeName: "pizza",
-      picture: "url...",
-      ingredients: [
-        {
-          name: "potato",
-          amount: 5000,
-          cost: 1000000,
-        },
-      ],
-      methods: ["fry"],
-      prep_time: "5min",
-      cost: "1000000$",
-      keywords: ["potato", "fat", "ketchup"],
-      preferences: [],
-      category: [1, 2, 3, 4, 4, 4, 4, 4, , 4, 4, 4, 4, 4, 4, 4],
-      steps: [1, 2, 3],
-    },
-    {
-      id: "3",
-      recipeName: "spaghetti",
-      picture: "url...",
-      ingredients: [
-        {
-          name: "potato",
-          amount: 5000,
-          cost: 1000000,
-        },
-      ],
-      methods: ["fry"],
-      prep_time: "5min",
-      cost: "1000000$",
-      keywords: ["potato", "fat", "ketchup"],
-      preferences: [],
-      category: "",
-      steps: [],
-    },
-  ],
-  user: getUsersData,
-  recipe: recipesData,
+  user: userData,
+  recipe: recipeData,
   ingredient: ingredients,
   enums: {
     foodGroups: foodGroupEnums,
@@ -144,4 +66,20 @@ module.exports = () => ({
     foodSubgroups: foodSubgroupEnum,
     restrictedDiets: restrictedDiets,
   },
+  allergens: [
+    "celery",
+    "gluten",
+    "shellfish",
+    "egg",
+    "fish",
+    "lupin",
+    "milk",
+    "mollusc",
+    "mustard",
+    "peanut",
+    "sesame",
+    "soy",
+    "sulphur",
+    "tree nuts",
+  ],
 });
