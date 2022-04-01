@@ -1,4 +1,5 @@
 import { ComponentWithAs, IconProps } from "@chakra-ui/react";
+import { fill } from "lodash";
 import React, { useState } from "react";
 import api from "../utils/api";
 import { Recipe } from "../utils/types";
@@ -15,13 +16,15 @@ type Props = {
 const ButtonsLong = ({ customData }: Props) => {
   console.log(customData);
   return (
-    <div className="rounded-lg shadow-drop bg-ricewhite py-4 flex">
-      <div className="bg-carrot flex-1">
+    <div className="rounded-lg shadow-drop bg-ricewhite flex">
+      <div className="bg-carrot w-[35%] h-full m-0 justify-center items-center text-ricewhite flex rounded-l-lg">
         <CustomIcon to={`/search/${customData.title}`}>
           <customData.icon />
         </CustomIcon>
       </div>
-      <span className="grow flex-2 text-darkbrown">{customData.title}</span>
+      <span className="grow flex-2 text-darkbrown py-4 text-center">
+        {customData.title}
+      </span>
     </div>
   );
 };

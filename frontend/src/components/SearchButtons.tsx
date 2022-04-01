@@ -26,11 +26,10 @@ const SearchButtons = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 content-center min-h-full text-darkbrown">
-      <ButtonsLong customData={profileButtons[0]} />
-      <ButtonsLong customData={profileButtons[1]} />
-      <ButtonsLong customData={profileButtons[2]} />
-      <ButtonsLong customData={profileButtons[3]} />
+    <div className="grid grid-cols-1 gap-4 content-center min-h-full text-darkbrown">
+      {profileButtons.map((title) => (
+        <ButtonsLong customData={title} />
+      ))}
     </div>
   );
 };
