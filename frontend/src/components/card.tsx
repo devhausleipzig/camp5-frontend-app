@@ -28,18 +28,8 @@ const RecipeCard = ({
   };
   return (
     <>
-<<<<<<< HEAD
       <div className="flip-card-wrapper mt-12">
-        <div
-          className="flip-card"
-          id="flip-card"
-          // style={flipcardInnerStyle}
-          onClick={() => setShowBack(!showBack)}
-        >
-=======
-      <div className="flip-card-wrapper">
         <div className="flip-card" id="flip-card">
->>>>>>> development
           <div
             className={`flip-card-inner`}
             style={{
