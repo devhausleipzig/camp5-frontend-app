@@ -6,11 +6,10 @@ import Search from "./pages/Search";
 import Basket from "./pages/Basket";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
-import RadioButtonSm from "./components/RadioButtonSm";
-import { ChakraProvider } from "@chakra-ui/react";
-import RadioButtonGroup from "./components/RadioButtonGroup";
-import RadioButtonLg from "./components/RadioButtonLg";
-import TimeSearch from "./pages/TimeSearch";
+import CookingTechniques from "./components/CookingTechniques";
+import Ingredient from "./components/Ingredient";
+import Time from "./components/Time";
+import Cost from "./components/Cost";
 
 function App() {
   return (
@@ -19,11 +18,17 @@ function App() {
       <div className="grow my-6 px-12 overflow-auto">
         <Routes>
           <Route path="/search" element={<Search />} />
+          <Route
+            path="/search/cooking%20techniques"
+            element={<CookingTechniques />}
+          />
+          <Route path="/search/ingredient" element={<Ingredient />} />
+          <Route path="/search/time" element={<Time />} />
+          <Route path="/search/cost" element={<Cost />} />
           <Route path="/" element={<Discover />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/search/time" element={<TimeSearch />} />
         </Routes>
       </div>
       <Footer />

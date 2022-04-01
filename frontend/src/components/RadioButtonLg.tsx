@@ -4,10 +4,10 @@ import { Recipe } from "../../src/utils/types";
 import { Icon as CloseIcon } from "./icons/close-icon";
 
 type Props = {
-  recipeName: string;
+  title: string;
 };
 
-const RadioButtonLg = ({ recipeName }: Props) => {
+const RadioButtonLg = ({ title }: Props) => {
   const [checked, setChecked] = useState(false);
   return (
     <div className="form-check rounded-lg shadow-drop bg-ricewhite py-4">
@@ -22,7 +22,7 @@ const RadioButtonLg = ({ recipeName }: Props) => {
         >
           {checked && <CloseIcon />}
         </div>
-        <span className="grow text-darkbrown">{recipeName}</span>
+        <span className="grow text-darkbrown">{title}</span>
       </label>
     </div>
   );
