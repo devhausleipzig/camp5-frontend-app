@@ -67,6 +67,7 @@ export type Recipe = {
   // below must be aggregated over all steps
   ingredients?: Array<Ingredient>;
   methods?: Array<Method>;
+  dietaryRestrictions: string[];
 };
 
 // make this type more generic in the future

@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "recipe-img": "url('/assets/pics/test.png')",
-    extend: {
+      },
       spacing: {
         navh: "3.125rem",
         navw: "62.5%",

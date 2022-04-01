@@ -33,10 +33,11 @@
   .bar::-webkit-scrollbar {
     display: none;
   }
-.background {
-  background-image: linear-gradient(45deg, #6cab54, #98c487);
-}
+  .background {
+    background-image: linear-gradient(45deg, #6cab54, #98c487);
+  }
 
-.button-gradient {
-  background-image: linear-gradient(45deg, #d9593d, #fb7e56);
+  .button-gradient {
+    background-image: linear-gradient(45deg, #d9593d, #fb7e56);
+  }
 }

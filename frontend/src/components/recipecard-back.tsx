@@ -1,11 +1,12 @@
 import { Listbox } from "@headlessui/react";
 import React from "react";
+import { Ingredient, RecipeStep } from "../utils/types";
 
 type ReciepeCardBackProps = {
   recipeName: string;
   contentInfo?: string[];
-  contentIngredients?: { name: string; amount: number; cost: number }[];
-  contentSteps?: string[];
+  contentIngredients?: Ingredient[];
+  contentSteps?: RecipeStep[];
   backSide: "info" | "ingredients" | "steps";
 };
 
@@ -24,16 +25,16 @@ const RecipeCardBack = ({
       <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
         {backSide === "steps" ? (
           <ol>
-            {contentSteps?.map((e) => (
-              <li>{e}</li>
+            {contentSteps?.map((e, i) => (
+              <li key={`${e.position}-${i}`}>{e}</li>
             ))}
           </ol>
         ) : (
           <ul>
             {backSide === "info"
-              ? contentInfo?.map((e) => <li>{e}</li>)
+              ? contentInfo?.map((e, i) => <li key={`${e}-${i}`}>{e}</li>)
               : contentIngredients?.map((e) => (
-                  <li>{`${e.amount} +" " + ${e.name}`}</li>
+                  <li key={`${e.id}`}>{` ${e.name}`}</li>
                 ))}
           </ul>
         )}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Recipe } from "../utils/types";
+import { Ingredient, Recipe, RecipeStep } from "../utils/types";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import RecipeCardBack from "./recipecard-back";
@@ -9,8 +9,8 @@ import RecipeCardFront from "./recipecard-front";
 export type CardProps = {
   recipe: Recipe;
   contentInfo: string[];
-  contentIngredients: { name: string; amount: number; cost: number }[];
-  contentSteps: string[];
+  contentIngredients: Ingredient[];
+  contentSteps: RecipeStep[];
 };
 
 const RecipeCard = ({
@@ -42,10 +42,7 @@ const RecipeCard = ({
             id="flip-card-inner"
           >
             <div className="flip-card-front" id="flip-card-front">
-              <RecipeCardFront
-                img={recipe.picture}
-                recipeName={recipe.recipeName}
-              />
+              <RecipeCardFront img={recipe.picture} recipeName={recipe.name} />
             </div>
             <div className="flip-card-back" id="flip-card-back">
               {
@@ -66,19 +63,22 @@ const RecipeCard = ({
                         <RecipeCardBack
                           backSide="info"
                           contentInfo={contentInfo}
-                          recipeName={recipe.recipeName}
+                          recipeName={recipe.name}
+                          key={`${contentInfo}`}
                         />
                       ) : backSides[i] === "ingredients" ? (
                         <RecipeCardBack
                           backSide="ingredients"
                           contentIngredients={contentIngredients}
-                          recipeName={recipe.recipeName}
+                          recipeName={recipe.name}
+                          key={`${contentIngredients}`}
                         />
                       ) : (
                         <RecipeCardBack
                           backSide="steps"
                           contentSteps={contentSteps}
-                          recipeName={recipe.recipeName}
+                          recipeName={recipe.name}
+                          key={`${contentSteps}`}
                         />
                       )}
                     </div>
