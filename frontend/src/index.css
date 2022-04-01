@@ -35,7 +35,7 @@
 
 @layer utilities {
   .flip-card-wrapper {
-    @apply absolute  w-full h-full flex items-center justify-center;
+    @apply w-screen h-full flex items-center justify-center align-middle;
   }
 
   .flip-card {
@@ -44,13 +44,13 @@
   }
 
   .flip-card-inner {
-    @apply relative w-[260px] h-[320px] transition-all ease-linear duration-500;
+    @apply relative w-[260px] transition-all ease-linear duration-500;
     transform-style: preserve-3d;
   }
 
   .flip-card-front,
   .flip-card-back {
-    @apply absolute  w-[260px] h-[320px] flex items-center justify-center transition-all ease-linear duration-500;
+    @apply w-[260px] h-[320px] flex items-center justify-center transition-all ease-linear duration-500;
     backface-visibility: hidden;
   }
 

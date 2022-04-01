@@ -15,29 +15,10 @@ import { ChakraProvider } from "@chakra-ui/react";
 import RadioButtonGroup from "./components/RadioButtonGroup";
 
 function App() {
-  const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
-
-  async function fetchAllRecipes(): Promise<void> {
-    const response: Recipe[] = await getRecipes();
-    setAllRecipes(response);
-  }
-
-  useEffect(() => {
-    fetchAllRecipes();
-  }, []);
-
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden">
       <Header />
       <div className="grow my-6 px-12 overflow-auto">
-        {allRecipes.length && (
-          <RecipeCard
-            recipe={allRecipes[0]}
-            contentInfo={allRecipes[0].category}
-            contentIngredients={allRecipes[0].ingredients}
-            contentSteps={[]}
-          />
-        )}
         <Routes>
           <Route path="/search" element={<Search />} />
           <Route path="/" element={<Discover />} />
