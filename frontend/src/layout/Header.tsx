@@ -3,6 +3,7 @@ import CustomIcon from "../components/CustomIcon";
 import { Route, Routes, Router, useLocation } from "react-router-dom";
 import Basket from "../pages/Basket";
 import Profile from "../pages/Profile";
+import { Icon } from "../components/icons/back-icon";
 
 const Header = () => {
   const location = useLocation();
