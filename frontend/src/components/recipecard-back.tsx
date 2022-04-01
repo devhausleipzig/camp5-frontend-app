@@ -2,12 +2,14 @@ import { Listbox } from "@headlessui/react";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import { Ingredient, RecipeStep } from "../utils/types";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 type ReciepeCardBackProps = {
   recipeName: string;
   contentInfo: string[];
   contentIngredients: Ingredient[];
   contentSteps: RecipeStep[];
+  flip: () => void;
 };
 
 const RecipeCardBack = ({
@@ -15,22 +17,27 @@ const RecipeCardBack = ({
   contentInfo,
   contentIngredients,
   contentSteps,
+  flip,
 }: ReciepeCardBackProps) => {
   const backSides = ["info", "ingredients", "steps"];
 
   return (
     <div className="bg-ricewhite rounded-[40px] h-[320px] w-[260px] border-[1px]  border-ricewhite font-poppins">
-      <div className="flex justify-center items-center h-[50px] border-b-[1px] border-b-darkbrown">
+      <div
+        onClick={flip}
+        className="flex justify-between items-center h-[50px] border-b-[1px] border-b-darkbrown px-4"
+      >
+        <img src="/assets/icons/backarrow.svg" className="h-4" alt="" />
         <h2 className="font-poppins">{recipeName}</h2>
+        <div></div>
       </div>
       {
         <Carousel
-          showThumbs={false}
           width="260px"
+          dynamicHeight
+          showStatus={false}
           swipeable
           emulateTouch
-          showArrows={false}
-          showStatus={false}
         >
           {backSides.map((page, i) => (
             <div key={page} className="w-[260px] h-[320px] bg-rice-white">

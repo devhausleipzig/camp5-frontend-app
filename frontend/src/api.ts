@@ -12,7 +12,7 @@ export const api = axios.create({
 
 export async function getRecipes(): Promise<Recipe[]> {
   try {
-    const response = await api.get("/recipes");
+    const response = await api.get("/recipe");
     var recipes = response.data;
   } catch (err) {
     console.error(err);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Ingredient, Recipe, RecipeStep } from "../utils/types";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { Carousel } from "react-responsive-carousel";
 import RecipeCardBack from "./recipecard-back";
 import RecipeCardFront from "./recipecard-front";
@@ -23,15 +23,13 @@ const RecipeCard = ({
   const [showBack, setShowBack] = useState(false);
 
   const backSides = ["info", "ingredients", "steps"];
-
+  const flip = () => {
+    setShowBack(!showBack);
+  };
   return (
     <>
-      <div className="flip-card-wrapper mt-8">
-        <div
-          className="flip-card"
-          id="flip-card"
-          onClick={() => setShowBack(!showBack)}
-        >
+      <div className="flip-card-wrapper">
+        <div className="flip-card" id="flip-card">
           <div
             className={`flip-card-inner`}
             style={{
@@ -39,7 +37,11 @@ const RecipeCard = ({
             }}
             id="flip-card-inner"
           >
-            <div className="flip-card-front" id="flip-card-front">
+            <div
+              onClick={() => setShowBack(!showBack)}
+              className="flip-card-front"
+              id="flip-card-front"
+            >
               <RecipeCardFront img={recipe.picture} recipeName={recipe.name} />
             </div>
             <div className="flip-card-back" id="flip-card-back">
@@ -48,6 +50,7 @@ const RecipeCard = ({
                 contentInfo={contentInfo}
                 contentIngredients={contentIngredients}
                 contentSteps={contentSteps}
+                flip={flip}
               />
             </div>
           </div>
