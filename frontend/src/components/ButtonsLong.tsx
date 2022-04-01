@@ -1,7 +1,6 @@
 import { ComponentWithAs, IconProps } from "@chakra-ui/react";
 import { fill } from "lodash";
 import React, { useState } from "react";
-import api from "../utils/api";
 import { Recipe } from "../utils/types";
 import CustomIcon from "./CustomIcon";
 import { Icon as CloseIcon } from "./icons/close-icon";
