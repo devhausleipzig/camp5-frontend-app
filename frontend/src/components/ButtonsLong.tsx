@@ -1,7 +1,6 @@
 import { ComponentWithAs, IconProps } from "@chakra-ui/react";
 import { fill } from "lodash";
 import React, { useState } from "react";
-import api from "../utils/api";
 import { Recipe } from "../utils/types";
 import CustomIcon from "./CustomIcon";
 import { Icon as CloseIcon } from "./icons/close-icon";
@@ -10,15 +9,15 @@ type Props = {
   customData: {
     icon: ComponentWithAs<"svg", IconProps>;
     title: string;
+    link: string
   };
 };
 
 const ButtonsLong = ({ customData }: Props) => {
-  console.log(customData);
   return (
-    <div className="rounded-lg shadow-drop bg-ricewhite flex">
-      <div className="bg-carrot w-[35%] h-full m-0 justify-center items-center text-ricewhite flex rounded-l-lg">
-        <CustomIcon to={`/search/${customData.title}`}>
+    <div className="rounded-lg shadow-drop border-2 border-solid border-ricewhite bg-ricewhite flex">
+      <div className="button-gradient w-[35%] h-full m-0 justify-center items-center text-ricewhite flex rounded-l-lg">
+        <CustomIcon to={`${customData.link}`}>
           <customData.icon />
         </CustomIcon>
       </div>

@@ -10,23 +10,27 @@ const ProfileButtons = () => {
     {
       title: "favorites",
       icon: HeartIcon,
+      link: "/profile/favorites"
     },
     {
       title: "library",
       icon: LibIcon,
+      link: "/profile/library"
     },
     {
       title: "upload recipe",
       icon: UploadIcon,
+      link: "/profile/upload-recipe"
     },
     {
       title: "update preferences",
       icon: UpdateIcon,
+      link: "/profile/update-preferences"
     },
   ];
 
   return (
-      <div className="grid grid-cols-1 gap-4 content-center min-h-full text-darkbrown">
+      <div className="grid grid-cols-1 gap-4 content-center min-h-full text-darkbrown mt-16">
         {profileButtons.map((title) => (
           <ButtonsLong customData={title} />
         ))}

@@ -1,9 +1,9 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { api, getRecipes } from "../api";
-import { Recipe } from "../../src/utils/types";
+import { Recipe } from "../utils/types";
 import RadioButtonSm from "./RadioButtonSm";
 
-const RadioButtonGroup = () => {
+const Allergens = () => {
   const [allergens, setAllergens] = useState([]);
   useEffect(() => {
     getDiets();
@@ -21,9 +21,9 @@ const RadioButtonGroup = () => {
   return (
     <div className="grid grid-cols-2 gap-4 content-center min-h-full">
       {allergens.length &&
-        allergens.map((allergen) => <RadioButtonSm allergen={allergen} />)}
+        allergens.map((allergen) => <RadioButtonSm title={allergen} />)}
     </div>
   );
 };
 
-export default RadioButtonGroup;
+export default Allergens;

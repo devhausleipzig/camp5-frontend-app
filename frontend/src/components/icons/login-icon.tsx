@@ -6,14 +6,14 @@ export const Icon = createIcon({
   path: (
     <>
       <path
-        fill="curentColor"
+        stroke="#F6F8ED"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="1.5"
         d="M10 1.667a8.333 8.333 0 100 16.666 8.333 8.333 0 100-16.667z"
       />
       <path
-        fill="curentColor"
+        stroke="#F6F8ED"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="1.5"

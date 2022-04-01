@@ -81,5 +81,5 @@ module.exports = () => ({
     "soy",
     "sulphur",
     "tree nuts",
-  ],
+  ]
 });
