@@ -1,25 +1,33 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
-import { Recipe } from "../utils/types";
+import { Recipe, RecipeFilterParams } from "../utils/types";
+import { recipeFilter, sort } from '../utils/filters';
+import { filter } from "lodash";
 
 type SearchbarProps = {
   recipes: Recipe[];
 };
 
+const defaultParams: RecipeFilterParams = {};
+
 export default function Searchbar({ recipes }: SearchbarProps) {
   const [selected, setSelected] = useState();
   const [query, setQuery] = useState("");
+  const [filteredRecipes, setFilteredRecipes] = useState([])
 
-  const filteredRecipes =
-    query === ""
-      ? []
-      : recipes.filter((recipe: Recipe) =>
-          recipe.recipeName
-            .toLowerCase()
-            .replace(/\s+/g, "")
-            .includes(query.toLowerCase().replace(/\s+/g, ""))
-        );
+  const user = {'avoidIngredients': []}; // replace with access to real user object
+
+  function handleAutoQuery(event){
+    const queryValue = event.target.value;
+    setQuery(queryValue)
+
+    const queryParams: RecipeFilterParams = {
+      'name': queryValue
+    }
+
+    setFilteredRecipes( recipes.filter(recipeFilter(user, queryParams)) )
+  }
 
   return (
     <div className="w-72 fixed top-16">
@@ -28,8 +36,9 @@ export default function Searchbar({ recipes }: SearchbarProps) {
           <div className="relative w-full text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-teal-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden">
             <Combobox.Input
               className="w-full border-none focus:ring-0 py-2 pl-3 pr-10 text-sm leading-5 text-gray-900"
-              displayValue={(recipe: Recipe) => recipe.recipeName}
-              onChange={(event) => setQuery(event.target.value)}
+              displayValue={(recipe: Recipe) => recipe.name}
+              autoComplete='off'
+              onChange={handleAutoQuery}
             />
           </div>
           <Transition
@@ -62,7 +71,7 @@ export default function Searchbar({ recipes }: SearchbarProps) {
                             selected ? "font-medium" : "font-normal"
                           }`}
                         >
-                          {recipe.recipeName}
+                          {recipe.name}
                         </span>
                         {selected ? (
                           <span

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./components/card";
-import { getRecipes } from "./utils/fetchRecipes";
+
+import { createRoutesFromChildren } from "react-router-dom";
+import Searchbar from "./components/searchbar";
+import logo from "./logo.svg";
+import { api, getRecipes } from "./api";
 import type { Recipe } from "./utils/types";
 
 function App() {

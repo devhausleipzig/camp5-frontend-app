@@ -1,6 +1,13 @@
 const fs = require("fs");
+const _ = require("lodash");
 
-const ingredients = JSON.parse(fs.readFileSync("./data/ingredients.json"));
+// local imports
+const { renameKeys } = require("./utils/renameKeys");
+
+///////////////
+//// Enums ////
+///////////////
+
 const foodGroupEnums = JSON.parse(
   fs.readFileSync("./enums/food-group-enum.json")
 );
@@ -16,6 +23,28 @@ const foodSubgroupEnum = JSON.parse(
 const restrictedDiets = JSON.parse(
   fs.readFileSync("./enums/restricted-diets.json")
 );
+
+//////////////
+//// Data ////
+//////////////
+
+let ingredients = JSON.parse(fs.readFileSync("./data/ingredients.json"));
+
+ingredients = ingredients.map((ingredient) => {
+  return renameKeys(ingredient, {
+    name_scientific: "nameScientific",
+    food_group: "foodGroup",
+    food_subgroup: "foodSubgroup",
+  });
+});
+
+const getUsersData = JSON.parse(fs.readFileSync("./data/users.json"));
+
+const recipesData = JSON.parse(fs.readFileSync("./data/recipes.json"));
+
+////////////////
+//// Export ////
+////////////////
 
 module.exports = () => ({
   user: [],
@@ -105,10 +134,14 @@ module.exports = () => ({
       steps: [],
     },
   ],
+  user: getUsersData,
+  recipe: recipesData,
   ingredient: ingredients,
-  foodGroupEnums: foodGroupEnums,
-  foodGroupSubgroups: foodGroupSubgroups,
-  foodNameEnums: foodNameEnums,
-  foodSubgroupEnum: foodSubgroupEnum,
-  restrictedDiets: restrictedDiets,
+  enums: {
+    foodGroups: foodGroupEnums,
+    foodGroupSubgroups: foodGroupSubgroups,
+    foodNames: foodNameEnums,
+    foodSubgroups: foodSubgroupEnum,
+    restrictedDiets: restrictedDiets,
+  },
 });

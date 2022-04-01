@@ -1,3 +1,83 @@
+export type Unit = "kilogram" | "gram" | "liter" | "milliliter";
+
+export type Method =
+  | "chop"
+  | "dice"
+  | "grate"
+  | "press"
+  | "blend"
+  | "braise"
+  | "boil"
+  | "fry"
+  | "bake"
+  | "grill";
+
+export type PrepTimeRating =
+  | "very fast"
+  | "quick"
+  | "medium"
+  | "long"
+  | "very long";
+
+export type CostRating =
+  | "very cheap"
+  | "cheap"
+  | "medium"
+  | "expensive"
+  | "very expensive";
+
+export type Cuisine = "German" | "Italian" | "American" | "Chinese" | "Indian";
+
+export type Ingredient = {
+  id: string;
+  name: string;
+  nameScientific: string;
+  foodGroup: string;
+  foodSubgroup: string;
+};
+
+export type ShoppingItem = {
+  item: Ingredient;
+  amount: number;
+  note: string;
+  unit: Unit;
+};
+
+export type ShoppingList = {
+  id: string;
+  items: Array<ShoppingItem>;
+};
+
+export type RecipeStep = {
+  position: number;
+  method: Method;
+  ingredients: Array<Ingredient>;
+  substeps: Array<RecipeStep>;
+};
+
+export type Recipe = {
+  id: string;
+  name: string;
+  picture?: string;
+  prepTime?: PrepTimeRating;
+  cost?: CostRating;
+  steps?: Array<RecipeStep>;
+  cuisineTags?: Array<Cuisine>;
+  keywords?: Array<string>;
+  // below must be aggregated over all steps
+  ingredients?: Array<Ingredient>;
+  methods?: Array<Method>;
+};
+
+// make this type more generic in the future
+export type RecipeFilterParams = {
+  name?: string;
+  methods?: Array<Method>;
+  prepTime?: PrepTimeRating;
+  cost?: CostRating;
+  ingredients?: Array<Ingredient["id"]>;
+};
+
 export type User = {
   id: string;
   signUpDate: string;
@@ -6,49 +86,9 @@ export type User = {
   profilePicture: string;
   password: string;
   email: string;
-  collection: Recipe[];
-  userOptions: UserOptions;
-  shoppingList: ShoppingList;
-  suggestions: Recipe[];
+  userOptions: {
+    avoidIngredients: string[];
+  };
+  collection: Array<Recipe["id"]>;
+  shoppingList: Array<ShoppingList["id"]>;
 };
-
-export type UserOptions = Partial<GlobalOptions>;
-
-export type ShoppingList = [
-  {
-    ingedientName: Partial<Ingredient>;
-    accAmount: string;
-    accCost: string;
-  }
-];
-
-export type Recipe = {
-  recipeName: string;
-  id: string;
-  picture: string;
-  ingredients: { name: string; amount: number; cost: number }[];
-  methods: string[];
-  prepTime: string;
-  cost: string;
-  keywords: string[];
-  preferences: string[];
-  category: string[];
-  steps: string[]; //to be further defined!!!
-};
-
-export type Ingredient = {
-  name: string;
-  amount: string;
-  cost: string;
-};
-
-export type GlobalOptions = [
-  {
-    preferences: string[]; // to be converted to Union Type?
-    categories: string[]; // to be converted to Union Type?
-    allergies: string[]; // to be converted to Union Type?
-    ingredients: Ingredient[];
-    methods: string[]; // to be converted to Union Type?
-    keywords: string[];
-  }
-];
