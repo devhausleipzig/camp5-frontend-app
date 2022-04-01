@@ -3,6 +3,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import { Ingredient, RecipeStep } from "../utils/types";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import RecipeSteps from "./RecipeSteps";
 
 type ReciepeCardBackProps = {
   recipeName: string;
@@ -39,9 +40,13 @@ const RecipeCardBack = ({
           swipeable
           emulateTouch
           showThumbs={false}
+          showArrows={false}
         >
           {backSides.map((page, i) => (
-            <div key={page} className="w-[260px] h-[320px] bg-rice-white">
+            <div
+              key={page}
+              className="w-[260px] h-[320px] bg-rice-white flex justify-start"
+            >
               {backSides[i] === "info" ? (
                 <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
                   <ul>
@@ -61,12 +66,11 @@ const RecipeCardBack = ({
                   </ul>
                 </div>
               ) : (
-                <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
+                <div className="border-b-[1px] border-darkbrown text-left h-[220px] w-full bar  overflow-y-scroll p-4">
                   <ol>
-                    {" "}
-                    {contentSteps?.map((e, i) => (
-                      <li key={`${e.position}-${i}`}>{JSON.stringify(e)}</li>
-                    ))}{" "}
+                    <li>
+                      <RecipeSteps steps={contentSteps} root={true} />
+                    </li>
                   </ol>
                 </div>
               )}
