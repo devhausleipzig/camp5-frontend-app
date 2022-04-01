@@ -1,21 +1,34 @@
 [
   {
-    "id": "W7e5zVQ0Svuc1QPF7OFc_g",
-    "recipeName": "potato",
-    "picture": "url...",
+    "id": "1",
+    "name": "pizza potato",
+    "picture": "/assets/pics/test.png",
     "ingredients": [
       {
+        "id": 1,
         "name": "potato",
+        "amount": 5000,
+        "cost": 1000000
+      },
+      {
+        "id": 2,
+        "name": "MOREpotato",
+        "amount": 5000,
+        "cost": 1000000
+      },
+      {
+        "id": 3,
+        "name": "EVENMOREpotato",
         "amount": 5000,
         "cost": 1000000
       }
     ],
-    "method": "fry",
-    "prepTime": "quick",
+    "methods": ["fry"],
+    "prep_time": "5min",
     "cost": "1000000$",
     "keywords": ["potato", "fat", "ketchup"],
     "preferences": [],
-    "category": [
+    "dietaryRestrictions": [
       "vegan",
       "glutenfree",
       "transgender",
@@ -33,11 +46,11 @@
       "nordic walking",
       "bouldern"
     ],
-    "steps": []
+    "steps": ["step1", "step2", "step3"]
   },
   {
     "id": "jIX0B45lTSuNPpDblTWUwQ",
-    "recipeName": "pizza",
+    "name": "pizza",
     "picture": "url...",
     "ingredients": [
       {
@@ -56,7 +69,7 @@
   },
   {
     "id": "eFjj2QUgTQK8P0KkIj_2Fw",
-    "recipeName": "spaghetti",
+    "name": "spaghetti",
     "picture": "url...",
     "ingredients": [
       {

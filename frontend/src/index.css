@@ -35,26 +35,37 @@
 
 @layer utilities {
   .flip-card-wrapper {
-    @apply w-screen h-full flex items-center justify-center align-middle;
+    @apply w-full h-full flex items-center justify-center;
   }
 
   .flip-card {
-    @apply transition-all ease-linear duration-500 w-[260px] h-[320px] rounded-[40px] bg-ricewhite flex flex-col items-center justify-center;
-    background-color: transparent;
+    @apply w-[260px] h-[320px] rounded-[40px];
   }
 
   .flip-card-inner {
-    @apply relative w-[260px] transition-all ease-linear duration-500;
+    @apply relative w-full h-full transition-all ease-linear duration-500;
     transform-style: preserve-3d;
   }
 
   .flip-card-front,
   .flip-card-back {
-    @apply w-[260px] h-[320px] flex items-center justify-center transition-all ease-linear duration-500;
+    @apply absolute w-full h-full top-0 left-0 flex items-center justify-center transition-all ease-linear duration-500;
     backface-visibility: hidden;
   }
 
   .flip-card-back {
     transform: rotateY(180deg);
+  }
+  .flip-card-front {
+    transform: rotateY(0deg);
+  }
+  .bar::-webkit-scrollbar {
+    display: none;
+  }
+  .background {
+    background-image: linear-gradient(45deg, #6cab54, #98c487);
+  }
+  .button-gradient {
+    background-image: linear-gradient(45deg, #d9593d, #fb7e56);
   }
 }

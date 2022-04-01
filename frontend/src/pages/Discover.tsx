@@ -2,7 +2,8 @@ import React from "react";
 import RecipeCard from "../components/card";
 import type { Recipe } from "../utils/types";
 import { useEffect, useState } from "react";
-import { getRecipes } from "../utils/fetchRecipes";
+// import { getRecipes } from "../utils/fetchRecipes";
+import { api, getRecipes } from "../api";
 
 const Discover = () => {
   const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
@@ -21,7 +22,7 @@ const Discover = () => {
       {allRecipes.length && (
         <RecipeCard
           recipe={allRecipes[0]}
-          contentInfo={allRecipes[0].category}
+          contentInfo={allRecipes[0].dietaryRestrictions}
           contentIngredients={allRecipes[0].ingredients}
           contentSteps={allRecipes[0].steps}
         />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Recipe } from "../utils/types";
+import { Ingredient, Recipe, RecipeStep } from "../utils/types";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import RecipeCardBack from "./recipecard-back";
@@ -9,8 +9,8 @@ import RecipeCardFront from "./recipecard-front";
 export type CardProps = {
   recipe: Recipe;
   contentInfo: string[];
-  contentIngredients: { name: string; amount: number; cost: number }[];
-  contentSteps: string[];
+  contentIngredients: Ingredient[];
+  contentSteps: RecipeStep[];
 };
 
 const RecipeCard = ({
@@ -21,19 +21,9 @@ const RecipeCard = ({
 }: CardProps) => {
   console.log(recipe);
 
-  const [flip, SetFlip] = useState<string>("rotateY(360deg)");
+  const [showBack, setShowBack] = useState(false);
 
-  const flipcardInnerStyle = {
-    transform: `${flip}`,
-  };
-
-  function flipCard(): void {
-    flip === "rotateY(360deg)"
-      ? SetFlip("rotateY(180deg)")
-      : SetFlip("rotateY(360deg)");
-  }
   const backSides = ["info", "ingredients", "steps"];
-  //const backSideContent = [recipe.category, recipe.ingredients, recipe.steps];
 
   return (
     <>
@@ -41,52 +31,60 @@ const RecipeCard = ({
         <div
           className="flip-card"
           id="flip-card"
-          style={flipcardInnerStyle}
-          onClick={flipCard}
+          // style={flipcardInnerStyle}
+          onClick={() => setShowBack(!showBack)}
         >
-          <div className="flip-card-inner" id="flip-card-inner">
+          <div
+            className={`flip-card-inner`}
+            style={{
+              transform: showBack ? "rotateY(180deg)" : "rotateY(0deg)",
+            }}
+            id="flip-card-inner"
+          >
             <div className="flip-card-front" id="flip-card-front">
-              <RecipeCardFront
-                img={recipe.picture}
-                recipeName={recipe.recipeName}
-              />
+              <RecipeCardFront img={recipe.picture} recipeName={recipe.name} />
             </div>
-            <div
-              onClick={flipCard}
-              className="flip-card-back"
-              id="flip-card-back"
-            >
-              <RecipeCardBack
-                backSide="info"
-                contentInfo={contentInfo}
-                recipeName={recipe.recipeName}
-              />
-
-              {/* <Carousel showThumbs={false} width="260px">
-                {backSides.map((page, i) => (
-                  <div key={page} className="w-[260px] h-[320px] bg-rice-white">
-                    {backSides[i] === "info" ? (
-                      <RecipeCardBack
-                        backSide="info"
-                        contentInfo={contentInfo}
-                        recipeName={recipe.recipeName}
-                      />
-                    ) : backSides[i] === "ingredients" ? (
-                      <RecipeCardBack
-                        backSide="ingredients"
-                        contentIngredients={contentIngredients}
-                        recipeName={recipe.recipeName}
-                      />
-                    ) : (
-                      <RecipeCardBack
-                        backSide="steps"
-                        contentSteps={contentSteps}
-                        recipeName={recipe.recipeName}
-                      />
-                    )}
-                  </div>
-                ))}
-              </Carousel> */}
+            <div className="flip-card-back" id="flip-card-back">
+              {
+                <Carousel
+                  showThumbs={false}
+                  width="260px"
+                  swipeable
+                  emulateTouch
+                  showArrows={false}
+                  showStatus={false}
+                >
+                  {backSides.map((page, i) => (
+                    <div
+                      key={page}
+                      className="w-[260px] h-[320px] bg-rice-white"
+                    >
+                      {backSides[i] === "info" ? (
+                        <RecipeCardBack
+                          backSide="info"
+                          contentInfo={contentInfo}
+                          recipeName={recipe.name}
+                          key={`${contentInfo}`}
+                        />
+                      ) : backSides[i] === "ingredients" ? (
+                        <RecipeCardBack
+                          backSide="ingredients"
+                          contentIngredients={contentIngredients}
+                          recipeName={recipe.name}
+                          key={`${contentIngredients}`}
+                        />
+                      ) : (
+                        <RecipeCardBack
+                          backSide="steps"
+                          contentSteps={contentSteps}
+                          recipeName={recipe.name}
+                          key={`${contentSteps}`}
+                        />
+                      )}
+                    </div>
+                  ))}
+                </Carousel>
+              }
             </div>
           </div>
         </div>
