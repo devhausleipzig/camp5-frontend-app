@@ -8,11 +8,12 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import RadioButtonSm from "./components/RadioButtonSm";
 import { ChakraProvider } from "@chakra-ui/react";
-import RadioButtonGroup from "./components/RadioButtonGroup";
+import RadioButtonGroup from "./components/Allergens";
 import CookingTechniques from "./components/CookingTechniques";
 import Ingredient from "./components/Ingredient";
 import Time from "./components/Time";
 import Cost from "./components/Cost";
+import Allergens from "./components/Allergens";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/search/time" element={<Time />} />   
             <Route path="/search/cost" element={<Cost />} />   
           <Route path="/" element={<Discover />} />
-          <Route path="/basket" element={<Basket />} />
+          <Route path="/basket" element={<Allergens />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
         </Routes>
