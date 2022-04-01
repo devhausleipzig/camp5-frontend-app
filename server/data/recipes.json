@@ -1,59 +1,89 @@
 [
-    {
-      "id": "W7e5zVQ0Svuc1QPF7OFc_g",
-      "name": "potato",
-      "picture": "url...",
-      "ingredients": [
-        {
-          "name": "potato",
-          "amount": 5000,
-          "cost": 1000000
-        }
-      ],
-      "method": "fry",
-      "prepTime": "quick",
-      "cost": "1000000$",
-      "keywords": ["potato", "fat", "ketchup"],
-      "preferences": [],
-      "category": "",
-      "steps": []
-    },
-    {
-        "id": "jIX0B45lTSuNPpDblTWUwQ",
-        "name": "pizza",
-        "picture": "url...",
-        "ingredients": [
-          {
-            "name": "potato",
-            "amount": 5000,
-            "cost": 1000000
-          }
-        ],
-        "method": "bake",
-        "prepTime": "quick",
-        "cost": "1000000$",
-        "keywords": ["potato", "fat", "ketchup"],
-        "preferences": [],
-        "category": "",
-        "steps": []
+  {
+    "id": "1",
+    "name": "pizza potato",
+    "picture": "/assets/pics/test.png",
+    "ingredients": [
+      {
+        "id": 1,
+        "name": "potato",
+        "amount": 5000,
+        "cost": 1000000
       },
       {
-        "id": "eFjj2QUgTQK8P0KkIj_2Fw",
-        "name": "spaghetti",
-        "picture": "url...",
-        "ingredients": [
-          {
-            "name": "potato",
-            "amount": 5000,
-            "cost": 1000000
-          }
-        ],
-        "method": "boil",
-        "prepTime": "quick",
-        "cost": "1000000$",
-        "keywords": ["potato", "fat", "ketchup"],
-        "preferences": [],
-        "category": "",
-        "steps": []
+        "id": 2,
+        "name": "MOREpotato",
+        "amount": 5000,
+        "cost": 1000000
+      },
+      {
+        "id": 3,
+        "name": "EVENMOREpotato",
+        "amount": 5000,
+        "cost": 1000000
       }
-  ]
+    ],
+    "methods": ["fry"],
+    "prep_time": "5min",
+    "cost": "1000000$",
+    "keywords": ["potato", "fat", "ketchup"],
+    "preferences": [],
+    "dietaryRestrictions": [
+      "vegan",
+      "glutenfree",
+      "transgender",
+      "yoga",
+      "lactosefree",
+      "virgin",
+      "kosher",
+      "halal",
+      "sugerfree",
+      "but sweet",
+      "esperanto",
+      "are you veda?",
+      "are you hungry?",
+      "no, I'm finnish",
+      "nordic walking",
+      "bouldern"
+    ],
+    "steps": ["step1", "step2", "step3"]
+  },
+  {
+    "id": "jIX0B45lTSuNPpDblTWUwQ",
+    "name": "pizza",
+    "picture": "url...",
+    "ingredients": [
+      {
+        "name": "potato",
+        "amount": 5000,
+        "cost": 1000000
+      }
+    ],
+    "method": "bake",
+    "prepTime": "quick",
+    "cost": "1000000$",
+    "keywords": ["potato", "fat", "ketchup"],
+    "preferences": [],
+    "category": "",
+    "steps": []
+  },
+  {
+    "id": "eFjj2QUgTQK8P0KkIj_2Fw",
+    "name": "spaghetti",
+    "picture": "url...",
+    "ingredients": [
+      {
+        "name": "potato",
+        "amount": 5000,
+        "cost": 1000000
+      }
+    ],
+    "method": "boil",
+    "prepTime": "quick",
+    "cost": "1000000$",
+    "keywords": ["potato", "fat", "ketchup"],
+    "preferences": [],
+    "category": "",
+    "steps": []
+  }
+]

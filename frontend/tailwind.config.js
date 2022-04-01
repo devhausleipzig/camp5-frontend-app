@@ -15,7 +15,11 @@ module.exports = {
       darkbrown: "#513131",
       white: "#FFFFFF",
     },
+
     extend: {
+      backgroundImage: {
+        "recipe-img": "url('/assets/pics/test.png')",
+      },
       spacing: {
         navh: "3.125rem",
         navw: "62.5%",
