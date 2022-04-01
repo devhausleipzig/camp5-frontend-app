@@ -22,7 +22,7 @@ function App() {
           recipe={allRecipes[0]}
           contentInfo={allRecipes[0].category}
           contentIngredients={allRecipes[0].ingredients}
-          contentSteps={[]}
+          contentSteps={allRecipes[0].steps}
         />
       )}
     </div>

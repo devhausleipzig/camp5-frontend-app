@@ -30,4 +30,7 @@
   .flip-card-front {
     transform: rotateY(0deg);
   }
+  .bar::-webkit-scrollbar {
+    display: none;
+  }
 }

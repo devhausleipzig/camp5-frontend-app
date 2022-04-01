@@ -21,21 +21,9 @@ const RecipeCard = ({
 }: CardProps) => {
   console.log(recipe);
 
-  // const [flip, SetFlip] = useState<string>("rotateY(0deg)");
   const [showBack, setShowBack] = useState(false);
 
-  // const flipcardInnerStyle = {
-  //   transform: `${flip}`,
-  // };
-
-  // function flipCard(): void {
-  //   flip === "rotateY(0deg)"
-  //     ? SetFlip("rotateY(180deg)")
-  //     : SetFlip("rotateY(180deg)");
-  // }
-
   const backSides = ["info", "ingredients", "steps"];
-  //const backSideContent = [recipe.category, recipe.ingredients, recipe.steps];
 
   return (
     <>
@@ -61,7 +49,14 @@ const RecipeCard = ({
             </div>
             <div className="flip-card-back" id="flip-card-back">
               {
-                <Carousel showThumbs={false} width="260px">
+                <Carousel
+                  showThumbs={false}
+                  width="260px"
+                  swipeable
+                  emulateTouch
+                  showArrows={false}
+                  showStatus={false}
+                >
                   {backSides.map((page, i) => (
                     <div
                       key={page}

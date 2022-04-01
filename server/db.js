@@ -22,7 +22,7 @@ module.exports = () => ({
   recipes: [
     {
       id: "1",
-      recipeName: "potato",
+      recipeName: "pizza potato",
       picture: "/assets/pics/test.png",
       ingredients: [
         {
@@ -46,7 +46,24 @@ module.exports = () => ({
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
       preferences: [],
-      category: ["1", "2", "3"],
+      category: [
+        "vegan",
+        "glutenfree",
+        "transgender",
+        "yoga",
+        "lactosefree",
+        "virgin",
+        "kosher",
+        "halal",
+        "sugerfree",
+        "but sweet",
+        "esperanto",
+        "are you veda?",
+        "are you hungry?",
+        "no, I'm finnish",
+        "nordic walking",
+        "bouldern",
+      ],
       steps: ["step1", "step2", "step3"],
     },
     {
@@ -65,7 +82,7 @@ module.exports = () => ({
       cost: "1000000$",
       keywords: ["potato", "fat", "ketchup"],
       preferences: [],
-      category: [1, 2, 3],
+      category: [1, 2, 3, 4, 4, 4, 4, 4, , 4, 4, 4, 4, 4, 4, 4],
       steps: [1, 2, 3],
     },
     {
