@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "license": "ISC",
   "scripts": {
-    "start": "json-server --watch db.json --port 3005"
+    "start": "json-server --watch db.js"
   },
   "dependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "slugid": "^3.0.0"
   }
 }

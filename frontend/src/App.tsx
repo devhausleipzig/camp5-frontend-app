@@ -1,42 +1,29 @@
-import { useState } from "react";
-import logo from "./logo.svg";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import { Route, Routes } from "react-router-dom";
+import Discover from "./pages/Discover";
+import Search from "./pages/Search";
+import Basket from "./pages/Basket";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import RadioButtonSm from "./components/RadioButtonSm";
+import { ChakraProvider } from "@chakra-ui/react";
+import RadioButtonGroup from "./components/RadioButtonGroup";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-red-500">Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="h-screen w-screen flex flex-col overflow-hidden">
+      <Header />
+      <div className="grow my-6 px-12 overflow-auto">
+        <Routes>
+          <Route path="/search" element={<Search />} />
+          <Route path="/" element={<Discover />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
