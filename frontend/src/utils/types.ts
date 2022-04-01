@@ -4,12 +4,15 @@ export type Method =
   | "chop"
   | "dice"
   | "grate"
+  | "grind"
   | "press"
   | "blend"
   | "braise"
   | "boil"
   | "fry"
   | "bake"
+  | "baste"
+  | "tenderize"
   | "grill";
 
 export type PrepTimeRating =
@@ -36,23 +39,24 @@ export type Ingredient = {
   foodSubgroup: string;
 };
 
-export type ShoppingItem = {
-  item: Ingredient;
+export type Item = {
+  ingredient: Ingredient;
   amount: number;
-  note: string;
   unit: Unit;
+  note: string;
 };
 
 export type ShoppingList = {
   id: string;
-  items: Array<ShoppingItem>;
+  items: Array<Item>;
 };
 
 export type RecipeStep = {
   position: number;
   method: Method;
-  ingredients: Array<Ingredient>;
+  items: Array<Item>;
   substeps: Array<RecipeStep>;
+  note: string;
 };
 
 export type Recipe = {
@@ -62,12 +66,12 @@ export type Recipe = {
   prepTime?: PrepTimeRating;
   cost?: CostRating;
   steps?: Array<RecipeStep>;
-  cuisineTags?: Array<Cuisine>;
+  cuisines?: Array<Cuisine>;
   keywords?: Array<string>;
   // below must be aggregated over all steps
   ingredients?: Array<Ingredient>;
   methods?: Array<Method>;
-  dietaryRestrictions: string[];
+  diets: string[];
 };
 
 // make this type more generic in the future

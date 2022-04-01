@@ -26,7 +26,7 @@ const RecipeCardBack = ({
         {backSide === "steps" ? (
           <ol>
             {contentSteps?.map((e, i) => (
-              <li key={`${e.position}-${i}`}>{e}</li>
+              <li key={`${e.position}-${i}`}>{JSON.stringify(e)}</li>
             ))}
           </ol>
         ) : (

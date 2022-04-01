@@ -37,7 +37,8 @@ function mappedLessThanFilter(map, key) {
 const RecipeFilterMap = {
   "name": textFilter,
   "keywords": includesFilter,
-  "cuisine": includesFilter,
+  "cuisines": includesFilter,
+  "diets": includesFilter,
   "ingredients": includesAndExcludesFilter,
   "methods": includesFilter,
   "prepTime": mappedLessThanFilter,
