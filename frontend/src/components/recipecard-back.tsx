@@ -38,32 +38,36 @@ const RecipeCardBack = ({
           showStatus={false}
           swipeable
           emulateTouch
+          showThumbs={false}
         >
           {backSides.map((page, i) => (
             <div key={page} className="w-[260px] h-[320px] bg-rice-white">
               {backSides[i] === "info" ? (
                 <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
-                  {contentInfo?.map((e, i) => (
-                    <ul>
+                  <ul>
+                    {" "}
+                    {contentInfo?.map((e, i) => (
                       <li key={`${e}-${i}`}>{e}</li>
-                    </ul>
-                  ))}
+                    ))}
+                  </ul>
                 </div>
               ) : backSides[i] === "ingredients" ? (
                 <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
-                  {contentIngredients?.map((e) => (
-                    <ul>
+                  <ul>
+                    {" "}
+                    {contentIngredients?.map((e) => (
                       <li key={`${e.id}`}>{` ${e.name}`}</li>
-                    </ul>
-                  ))}
+                    ))}{" "}
+                  </ul>
                 </div>
               ) : (
                 <div className="border-b-[1px] border-darkbrown flex flex-col justify-start items-center h-[220px] w-full bar  overflow-y-scroll p-4">
-                  {contentSteps?.map((e, i) => (
-                    <ol>
+                  <ol>
+                    {" "}
+                    {contentSteps?.map((e, i) => (
                       <li key={`${e.position}-${i}`}>{JSON.stringify(e)}</li>
-                    </ol>
-                  ))}
+                    ))}{" "}
+                  </ol>
                 </div>
               )}
             </div>
