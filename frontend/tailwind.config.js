@@ -9,6 +9,7 @@ module.exports = {
     },
     fontSize: {
       xxs: "9pt",
+      xxl: "36pt"
     },
     colors: {
       green: "#8BBC78",

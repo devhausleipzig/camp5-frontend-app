@@ -3,7 +3,7 @@ import ButtonsLong from "./ButtonsLong";
 import { Icon as LogInIcon } from "./icons/login-icon";
 import { Icon as SignUpIcon } from "./icons/signup-icon";
 
-const Login = () => {
+const LoginButtons = () => {
     let loginButtons = [
         {
           title: "login",
@@ -17,7 +17,7 @@ const Login = () => {
         }
     ]
     return (
-        <div className="grid grid-cols-1 gap-4 content-center min-h-full text-darkbrown mt-16">asedasdfsd
+        <div className="grid grid-cols-1 gap-4 content-center min-h-full text-darkbrown mt-16">
         {loginButtons.map((title) => (
           <ButtonsLong customData={title} />
         ))}
@@ -25,4 +25,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginButtons;

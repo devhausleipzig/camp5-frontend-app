@@ -5,19 +5,9 @@ import RadioButtonSm from "./RadioButtonSm";
 import { Method } from "../utils/types";
 import { Icon as BackIcon } from "./icons/back-icon"
 import CustomIcon from "./CustomIcon";
-import { useNavigate } from "react-router-dom"
-import { ComponentWithAs, IconProps } from "@chakra-ui/react";
 
-type Props = {
-    customData: {
-      icon: ComponentWithAs<"svg", IconProps>;
-      title: string;
-      link: string
-    };
-}
 
-const CookingTechniques = ({ customData }: Props) => {
-    
+const CookingTechniques = () => {
     const methods = [
         "chop",
         "dice",
@@ -31,13 +21,11 @@ const CookingTechniques = ({ customData }: Props) => {
         "grill"
     ]
 
-    const back = useNavigate()
-
-    return (
+  return (
     <>
-    <div className="bg-carrot text-ricewhite">
-          <CustomIcon to={`${back('/search')}`}>
-              <customData.icon />
+    <div className="text-ricewhite absolute">
+          <CustomIcon to={`/search`}>
+              <BackIcon className="icon-shadow"/>
           </CustomIcon>
       </div>
       <div className="grid grid-cols-2 gap-4 content-center min-h-full">
