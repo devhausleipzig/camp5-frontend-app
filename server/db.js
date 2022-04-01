@@ -1,8 +1,10 @@
+// third-party imports
 const fs = require("fs");
 const _ = require("lodash");
 
 // local imports
 const { renameKeys } = require("./utils/renameKeys");
+
 
 ///////////////
 //// Enums ////
@@ -28,7 +30,9 @@ const restrictedDiets = JSON.parse(
 //// Data ////
 //////////////
 
-let ingredients = JSON.parse(fs.readFileSync("./data/ingredients.json"));
+let ingredients = JSON.parse(
+  fs.readFileSync("./data/ingredients.json")
+);
 
 ingredients = ingredients.map((ingredient) => {
   return renameKeys(ingredient, {
@@ -38,18 +42,22 @@ ingredients = ingredients.map((ingredient) => {
   });
 });
 
-const getUsersData = JSON.parse(fs.readFileSync("./data/users.json"));
+const userData = JSON.parse(
+  fs.readFileSync("./data/users.json")
+);
 
-const recipesData = JSON.parse(fs.readFileSync("./data/recipes.json"));
+const recipeData = JSON.parse(
+  fs.readFileSync("./data/recipes.json")
+);
+
 
 ////////////////
 //// Export ////
 ////////////////
 
 module.exports = () => ({
-  user: [],
-  user: getUsersData,
-  recipe: recipesData,
+  user: userData,
+  recipe: recipeData,
   ingredient: ingredients,
   enums: {
     foodGroups: foodGroupEnums,

@@ -22,7 +22,7 @@ const Discover = () => {
       {allRecipes.length && (
         <RecipeCard
           recipe={allRecipes[0]}
-          contentInfo={allRecipes[0].dietaryRestrictions}
+          contentInfo={allRecipes[0].diets}
           contentIngredients={allRecipes[0].ingredients}
           contentSteps={allRecipes[0].steps}
         />

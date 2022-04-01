@@ -1,89 +1,397 @@
 [
   {
-    "id": "1",
-    "name": "pizza potato",
+    "id": "x90H7Sjh98SH63_HdhLCM",
+    "name": "Pizza",
+    "description": "A dish of Italian origin, consisting of a flat round base of dough baked with a topping of tomatoes and cheese, typically with added meat, fish, or vegetables",
     "picture": "/assets/pics/test.png",
-    "ingredients": [
+    "prepTime":"quick",
+    "cost": "cheap",
+    "steps": [
       {
-        "id": 1,
-        "name": "potato",
-        "amount": 5000,
-        "cost": 1000000
+        "position": 1,
+        "method": "fry",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Oat",
+              "name_scientific": "Avena sativa",
+              "id": "FOOD00022",
+              "food_group": "Cereals and cereal products",
+              "food_subgroup": "Cereals"
+            },
+            "amount": 100,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [],
+        "note": "a little of this"
       },
       {
-        "id": 2,
-        "name": "MOREpotato",
-        "amount": 5000,
-        "cost": 1000000
+        "position": 2,
+        "method": "bake",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Star fruit",
+              "name_scientific": "Averrhoa carambola",
+              "id": "FOOD00023",
+              "food_group": "Fruits",
+              "food_subgroup": "Tropical fruits"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          },
+          {
+            "ingredient": {
+              "name": "Brazil nut",
+              "name_scientific": "Bertholletia excelsa",
+              "id": "FOOD00024",
+              "food_group": "Nuts",
+              "food_subgroup": "Nuts"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [
+          {
+            "position": 1,
+            "method": "fry",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Star fruit",
+                  "name_scientific": "Averrhoa carambola",
+                  "id": "FOOD00023",
+                  "food_group": "Fruits",
+                  "food_subgroup": "Tropical fruits"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": ""
+              }
+            ],
+            "substeps": [],
+            "note": "crispy crisp fry fry"
+          },
+          {
+            "position": 2,
+            "method": "grind",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Brazil nut",
+                  "name_scientific": "Bertholletia excelsa",
+                  "id": "FOOD00024",
+                  "food_group": "Nuts",
+                  "food_subgroup": "Nuts"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": "only the biggest"
+              }
+            ],
+            "substeps": [],
+            "note": "grind it so fine you could snort it off a spider's web"
+          }
+        ],
+        "note": "this one is a bit complicated"
+      }
+    ],
+    "cuisines": ["Italian", "American"],
+    "keywords": ["pizzalicious", "mafia only", "concrete shoes"],
+    "ingredients": [
+      {
+        "name": "Oat",
+        "name_scientific": "Avena sativa",
+        "id": "FOOD00022",
+        "food_group": "Cereals and cereal products",
+        "food_subgroup": "Cereals"
       },
       {
-        "id": 3,
-        "name": "EVENMOREpotato",
-        "amount": 5000,
-        "cost": 1000000
+        "name": "Star fruit",
+        "name_scientific": "Averrhoa carambola",
+        "id": "FOOD00023",
+        "food_group": "Fruits",
+        "food_subgroup": "Tropical fruits"
+      },
+      {
+        "name": "Brazil nut",
+        "name_scientific": "Bertholletia excelsa",
+        "id": "FOOD00024",
+        "food_group": "Nuts",
+        "food_subgroup": "Nuts"
       }
     ],
-    "methods": ["fry"],
-    "prep_time": "5min",
-    "cost": "1000000$",
-    "keywords": ["potato", "fat", "ketchup"],
-    "preferences": [],
-    "dietaryRestrictions": [
-      "vegan",
-      "glutenfree",
-      "transgender",
-      "yoga",
-      "lactosefree",
-      "virgin",
-      "kosher",
-      "halal",
-      "sugerfree",
-      "but sweet",
-      "esperanto",
-      "are you veda?",
-      "are you hungry?",
-      "no, I'm finnish",
-      "nordic walking",
-      "bouldern"
-    ],
-    "steps": ["step1", "step2", "step3"]
+    "methods": ["fry", "bake", "grind"],
+    "diets": ["GlutenFreeDiet", "VeganDiet"]
   },
   {
-    "id": "jIX0B45lTSuNPpDblTWUwQ",
-    "name": "pizza",
-    "picture": "url...",
-    "ingredients": [
+    "id": "x80H7Sjt98SH63_GdhLsA",
+    "name": "Kung-Pow Chicken",
+    "description": "Kung Pao chicken, also transcribed Gong Bao or Kung Po, is a spicy, stir-fried Chinese dish made with cubes of chicken, peanuts, vegetables, and chili peppers. The classic dish in Sichuan cuisine originated in the Sichuan Province of south-western China and includes Sichuan peppercorns.",
+    "picture": "/assets/pics/test.png",
+    "prepTime":"medium",
+    "cost": "medium",
+    "steps": [
       {
-        "name": "potato",
-        "amount": 5000,
-        "cost": 1000000
+        "position": 1,
+        "method": "grill",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Bivalvia (Clam, Mussel, Oyster)",
+              "name_scientific": "Bivalvia",
+              "id": "FOOD00531",
+              "food_group": "Aquatic foods",
+              "food_subgroup": "Mollusks"
+            },
+            "amount": 100,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [],
+        "note": "a little of this"
+      },
+      {
+        "position": 2,
+        "method": "grill",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Squid",
+              "name_scientific": "Teuthida",
+              "id": "FOOD00532",
+              "food_group": "Aquatic foods",
+              "food_subgroup": "Mollusks"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          },
+          {
+            "ingredient": {
+              "name": "Walrus",
+              "name_scientific": "Odobenus rosmarus",
+              "id": "FOOD00537",
+              "food_group": "Aquatic foods",
+              "food_subgroup": "Pinnipeds"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [
+          {
+            "position": 1,
+            "method": "blend",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Squid",
+                  "name_scientific": "Teuthida",
+                  "id": "FOOD00532",
+                  "food_group": "Aquatic foods",
+                  "food_subgroup": "Mollusks"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": ""
+              }
+            ],
+            "substeps": [],
+            "note": "make sure to remove the beak first"
+          },
+          {
+            "position": 2,
+            "method": "baste",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Walrus",
+                  "name_scientific": "Odobenus rosmarus",
+                  "id": "FOOD00537",
+                  "food_group": "Aquatic foods",
+                  "food_subgroup": "Pinnipeds"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": "arf arfff *clap*"
+              }
+            ],
+            "substeps": [],
+            "note": "baste that blubber real good now"
+          }
+        ],
+        "note": "this one is a bit complicated"
       }
     ],
-    "method": "bake",
-    "prepTime": "quick",
-    "cost": "1000000$",
-    "keywords": ["potato", "fat", "ketchup"],
-    "preferences": [],
-    "category": "",
-    "steps": []
+    "cuisines": ["Chinese", "American"],
+    "keywords": ["kung-fu for your face", "better than a knuckle sandwhich", "pow! pow! pow!"],
+    "ingredients": [
+      {
+        "name": "Bivalvia (Clam, Mussel, Oyster)",
+        "name_scientific": "Bivalvia",
+        "id": "FOOD00531",
+        "food_group": "Aquatic foods",
+        "food_subgroup": "Mollusks"
+      },
+      {
+        "name": "Squid",
+        "name_scientific": "Teuthida",
+        "id": "FOOD00532",
+        "food_group": "Aquatic foods",
+        "food_subgroup": "Mollusks"
+      },
+      {
+        "name": "Walrus",
+        "name_scientific": "Odobenus rosmarus",
+        "id": "FOOD00537",
+        "food_group": "Aquatic foods",
+        "food_subgroup": "Pinnipeds"
+      }
+    ],
+    "methods": ["blend", "grill", "baste"],
+    "diets": ["GlutenFreeDiet", "VeganDiet"]
   },
   {
-    "id": "eFjj2QUgTQK8P0KkIj_2Fw",
-    "name": "spaghetti",
-    "picture": "url...",
-    "ingredients": [
+    "id": "T90g7Arnold98SH63_HSchwarZ9l",
+    "name": "Austrian Sausage",
+    "description": "Arnie has something to show you...",
+    "picture": "/assets/pics/test.png",
+    "prepTime":"quick",
+    "cost": "expensive",
+    "steps": [
       {
-        "name": "potato",
-        "amount": 5000,
-        "cost": 1000000
+        "position": 1,
+        "method": "fry",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Oat",
+              "name_scientific": "Avena sativa",
+              "id": "FOOD00022",
+              "food_group": "Cereals and cereal products",
+              "food_subgroup": "Cereals"
+            },
+            "amount": 100,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [],
+        "note": "a little of this"
+      },
+      {
+        "position": 2,
+        "method": "braise",
+        "items": [
+          {
+            "ingredient": {
+              "name": "Chicken",
+              "name_scientific": "Gallus gallus",
+              "id": "FOOD00329",
+              "food_group": "Animal foods",
+              "food_subgroup": "Poultry"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          },
+          {
+            "ingredient": {
+              "name": "Milk (Human)",
+              "name_scientific": null,
+              "id": "FOOD00666",
+              "food_group": "Milk and milk products",
+              "food_subgroup": "Unfermented milks"
+            },
+            "amount": 20,
+            "unit": "gram",
+            "note": ""
+          }
+        ],
+        "substeps": [
+          {
+            "position": 1,
+            "method": "tenderize",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Chicken",
+                  "name_scientific": "Gallus gallus",
+                  "id": "FOOD00329",
+                  "food_group": "Animal foods",
+                  "food_subgroup": "Poultry"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": ""
+              }
+            ],
+            "substeps": [],
+            "note": "pound that chicken hard"
+          },
+          {
+            "position": 2,
+            "method": "boil",
+            "items": [
+              {
+                "ingredient": {
+                  "name": "Milk (Human)",
+                  "name_scientific": null,
+                  "id": "FOOD00666",
+                  "food_group": "Milk and milk products",
+                  "food_subgroup": "Unfermented milks"
+                },
+                "amount": 20,
+                "unit": "gram",
+                "note": ""
+              }
+            ],
+            "substeps": [],
+            "note": "the scent of home"
+          }
+        ],
+        "note": "this one is a bit complicated"
       }
     ],
-    "method": "boil",
-    "prepTime": "quick",
-    "cost": "1000000$",
-    "keywords": ["potato", "fat", "ketchup"],
-    "preferences": [],
-    "category": "",
-    "steps": []
+    "cuisines": ["Austrian"],
+    "keywords": ["Get to the choppa!"],
+    "ingredients": [
+      {
+        "name": "Oat",
+        "name_scientific": "Avena sativa",
+        "id": "FOOD00022",
+        "food_group": "Cereals and cereal products",
+        "food_subgroup": "Cereals"
+      },
+      {
+        "name": "Chicken",
+        "name_scientific": "Gallus gallus",
+        "id": "FOOD00329",
+        "food_group": "Animal foods",
+        "food_subgroup": "Poultry"
+      },
+      {
+        "name": "Milk (Human)",
+        "name_scientific": null,
+        "id": "FOOD00666",
+        "food_group": "Milk and milk products",
+        "food_subgroup": "Unfermented milks"
+      }
+    ],
+    "methods": ["grind", "braise", "boil", "tenderize"],
+    "diets": [
+      "LowCalorieDiet",
+      "LowFatDiet",
+      "LowLactoseDiet",
+      "LowSaltDiet"
+    ]
   }
 ]
