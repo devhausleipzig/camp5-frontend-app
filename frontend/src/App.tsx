@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import RadioButtonSm from "./components/RadioButtonSm";
 import { ChakraProvider } from "@chakra-ui/react";
 import RadioButtonGroup from "./components/RadioButtonGroup";
+import RadioButtonLg from "./components/RadioButtonLg";
+import TimeSearch from "./pages/TimeSearch";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/search/time" element={<TimeSearch />} />
         </Routes>
       </div>
       <Footer />
