@@ -1,3 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background {
+  background-image: linear-gradient(45deg, #6cab54, #98c487);
+}
+
+.button-gradient {
+  background-image: linear-gradient(45deg, #d9593d, #fb7e56);
+}
+
+.icon-glow {
+  filter: drop-shadow(0px 0px 0.4rem rgba(246, 248, 237, 1));
+}
+.icon-shadow {
+  filter: drop-shadow(0 0.2rem 0.4rem rgba(81, 49, 49, 0.6));
+}
+
+.text-shadow-md {
+  text-shadow: 0 0.1rem 0.2rem rgba(81, 49, 49, 0.24),
+    0 0.2rem 0.4rem rgba(81, 49, 49, 0.2),
+    0 0.1rem 0.8rem rgba(81, 49, 49, 0.18);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 15px 30px rgba(81, 49, 49, 0.11),
+    0 5px 15px rgba(81, 49, 49, 0.08);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+@layer utilities {
+  .flip-card-wrapper {
+    @apply w-full h-full flex items-center justify-center;
+  }
+
+  .flip-card {
+    @apply w-[260px] h-[320px] rounded-[40px];
+  }
+
+  .flip-card-inner {
+    @apply relative w-full h-full transition-all ease-linear duration-500;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute w-full h-full top-0 left-0 flex items-center justify-center transition-all ease-linear duration-500;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front {
+    transform: rotateY(0deg);
+  }
+  .bar::-webkit-scrollbar {
+    display: none;
+  }
+  .background {
+    background-image: linear-gradient(45deg, #6cab54, #98c487);
+  }
+  .button-gradient {
+    background-image: linear-gradient(45deg, #d9593d, #fb7e56);
+  }
+}
+
+.control-dots {
+  bottom: 54px !important;
+}
