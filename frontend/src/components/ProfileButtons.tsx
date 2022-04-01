@@ -5,22 +5,22 @@ import { Icon as TimeIcon } from "./icons/time-icon";
 import { Icon as IngredientsIcon } from "./icons/ingredients-icon";
 import { Icon as CostIcon } from "./icons/cost-icon";
 
-const SearchButtons = () => {
+const ProfileButtons = () => {
   let profileButtons = [
     {
-      title: "cooking techniques",
+      title: "favorites",
       icon: CtIcon,
     },
     {
-      title: "ingredient",
+      title: "library",
       icon: IngredientsIcon,
     },
     {
-      title: "time",
+      title: "upload recipe",
       icon: TimeIcon,
     },
     {
-      title: "cost",
+      title: "update preferences",
       icon: CostIcon,
     },
   ];
@@ -34,4 +34,4 @@ const SearchButtons = () => {
   );
 };
 
-export default SearchButtons;
+export default ProfileButtons;

@@ -1,8 +1,8 @@
-import RadioButtonLgGroup from "../components/RadioButtonLgGroup";
+import SearchButtons from "../components/SearchButtons";
 
 const Search = () => {
   return <div>
-    <RadioButtonLgGroup />
+    <SearchButtons />
   </div>;
 };
 

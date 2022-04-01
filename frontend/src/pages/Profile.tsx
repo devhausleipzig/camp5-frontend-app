@@ -1,9 +1,9 @@
-import RadioButtonGroup from "../components/RadioButtonGroup";
+import ProfileButtons from "../components/ProfileButtons";
 
 const Profile = () => {
   return (
     <div>
-      <RadioButtonGroup />
+      <ProfileButtons />
     </div>
   );
 };
