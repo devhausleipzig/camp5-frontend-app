@@ -30,18 +30,6 @@ function App() {
   }, []);
 
   return (
-
-    {if (path="login") { 
-      <div className="h-screen w-screen flex flex-col overflow-hidden">
-      <div className="grow my-6 px-12 overflow-auto">
-        <Routes>
-          <Route path="/search" element={<Search />} />
-          <Route path="/" element={<Discover />} />
-          <Route path="/basket" element={<Basket />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </div>
     <div className="h-screen w-screen flex flex-col overflow-hidden">
       <Header />
       <div className="grow my-6 px-12 overflow-auto">
@@ -55,8 +43,6 @@ function App() {
       </div>
       <Footer />
     </div>
-    }
-    }
   );
 }
 

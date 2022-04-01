@@ -1,27 +1,27 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import ButtonsLong from "./ButtonsLong";
-import { Icon as CtIcon } from "./icons/ct-icon";
-import { Icon as TimeIcon } from "./icons/time-icon";
-import { Icon as IngredientsIcon } from "./icons/ingredients-icon";
-import { Icon as CostIcon } from "./icons/cost-icon";
+import { Icon as HeartIcon } from "./icons/heart-icon";
+import { Icon as LibIcon } from "./icons/library-icon";
+import { Icon as UploadIcon } from "./icons/upload-icon";
+import { Icon as UpdateIcon } from "./icons/preferences-icon";
 
 const ProfileButtons = () => {
   let profileButtons = [
     {
       title: "favorites",
-      icon: CtIcon,
+      icon: HeartIcon,
     },
     {
       title: "library",
-      icon: IngredientsIcon,
+      icon: LibIcon,
     },
     {
       title: "upload recipe",
-      icon: TimeIcon,
+      icon: UploadIcon,
     },
     {
       title: "update preferences",
-      icon: CostIcon,
+      icon: UpdateIcon,
     },
   ];
 
