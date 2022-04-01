@@ -8,7 +8,7 @@ export const Icon = createIcon({
       <path
         fill="none"
         stroke="currentColor"
-        stroke-width="1.5"
+        stroke-width="1"
         stroke-linecap="round"
         stroke-linejoin="round"
         d="M9 17C13.4184 17 17 13.4184 17 9C17 4.5816 13.4184 1 9 1C4.5816 1 1 4.5816 1 9C1 13.4184 4.5816 17 9 17Z"
