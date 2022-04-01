@@ -14,7 +14,6 @@ type Props = {
 };
 
 const ButtonsLong = ({ customData }: Props) => {
-  console.log(customData);
   return (
     <div className="rounded-lg shadow-drop border-2 border-solid border-ricewhite bg-ricewhite flex">
       <div className="button-gradient w-[35%] h-full m-0 justify-center items-center text-ricewhite flex rounded-l-lg">
